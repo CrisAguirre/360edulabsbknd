@@ -9,8 +9,8 @@ function cookieOptions(expiresAt?: Date): CookieOptions {
   return {
     httpOnly: true,
     secure: config.isProduction,
-    sameSite: 'lax',
-    path: '/api/v1/auth',
+    sameSite: config.isProduction ? 'none' : 'lax',
+    path: '/',
     ...(expiresAt ? { expires: expiresAt } : {})
   };
 }

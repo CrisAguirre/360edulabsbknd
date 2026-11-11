@@ -5,7 +5,8 @@ const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().int().positive().default(4000),
   MONGODB_URI: z.string().optional(),
-  CLIENT_ORIGIN: z.string().default('http://localhost:5173'),
+  CLIENT_ORIGIN: z.string().optional(),
+  FRONTEND_URL: z.string().optional(),
   JWT_ACCESS_SECRET: z.string().min(16).default('dev-access-secret-change-me-please'),
   JWT_REFRESH_SECRET: z.string().min(16).default('dev-refresh-secret-change-me-please'),
   ACCESS_TOKEN_TTL: z.string().default('15m'),
@@ -23,6 +24,16 @@ if (!parsed.success) {
 const env = parsed.data;
 const nodeEnv = env.NODE_ENV;
 
+const rawOrigins = [
+  env.CLIENT_ORIGIN,
+  env.FRONTEND_URL,
+  nodeEnv !== 'production' ? 'http://localhost:5173' : undefined
+]
+  .filter(Boolean)
+  .flatMap((o) => (o ? o.split(',') : []))
+  .map((origin) => origin.trim().replace(/\/+$/, ''))
+  .filter(Boolean);
+
 export const config = {
   nodeEnv,
   isProduction: nodeEnv === 'production',
@@ -30,11 +41,11 @@ export const config = {
   isTest: nodeEnv === 'test',
   port: env.PORT,
   mongoUri: env.MONGODB_URI,
-  clientOrigins: env.CLIENT_ORIGIN.split(',').map((origin) => origin.trim()).filter(Boolean),
+  clientOrigins: Array.from(new Set(rawOrigins)),
   jwtAccessSecret: env.JWT_ACCESS_SECRET,
   jwtRefreshSecret: env.JWT_REFRESH_SECRET,
   accessTokenTtl: env.ACCESS_TOKEN_TTL,
   refreshTokenTtlDays: env.REFRESH_TOKEN_TTL_DAYS,
-  autoSeed: env.AUTO_SEED ? env.AUTO_SEED === 'true' : nodeEnv === 'development',
+  autoSeed: env.AUTO_SEED ? env.AUTO_SEED === 'true' : true,
   refreshCookieName: 'cito_refresh'
 };

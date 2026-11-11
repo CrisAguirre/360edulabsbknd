@@ -7,7 +7,7 @@ let memoryServer: MongoMemoryServer | null = null;
 
 export async function connectDatabase(): Promise<void> {
   if (config.mongoUri) {
-    await mongoose.connect(config.mongoUri, { dbName: 'citoindagar360' });
+    await mongoose.connect(config.mongoUri);
     logger.info('MongoDB connected');
     return;
   }
