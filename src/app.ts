@@ -67,11 +67,26 @@ export function createApp() {
     cors({
       credentials: true,
       origin(origin, callback) {
-        if (!origin || config.clientOrigins.includes(origin)) {
+        if (!origin) {
           callback(null, true);
           return;
         }
-        callback(new Error(`Origen no permitido: ${origin}`));
+        // Coincidencia directa con orígenes configurados
+        if (config.clientOrigins.includes(origin)) {
+          callback(null, true);
+          return;
+        }
+        // Permitir subdominios de despliegue y vistas previas en Vercel
+        if (/^https:\/\/edulabs360.*\.vercel\.app$/.test(origin)) {
+          callback(null, true);
+          return;
+        }
+        // Permitir localhost en entornos que no sean producción estricta
+        if (!config.isProduction && /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin)) {
+          callback(null, true);
+          return;
+        }
+        callback(null, false);
       }
     })
   );
