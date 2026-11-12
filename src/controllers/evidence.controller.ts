@@ -17,8 +17,8 @@ export async function listMyEvidenceController(req: Request, res: Response): Pro
 }
 
 export async function saveEvidenceController(req: Request, res: Response): Promise<void> {
-  if (req.auth!.role !== 'student') {
-    throw forbidden('Solo los estudiantes entregan evidencias');
+  if (req.auth!.role !== 'student' && req.auth!.role !== 'admin') {
+    throw forbidden('Solo los estudiantes y administradores entregan evidencias');
   }
   const input = saveEvidenceSchema.parse(req.body);
   const evidence = await createOrUpdateEvidence(req.auth!.userId, input);
@@ -26,8 +26,8 @@ export async function saveEvidenceController(req: Request, res: Response): Promi
 }
 
 export async function updateEvidenceController(req: Request, res: Response): Promise<void> {
-  if (req.auth!.role !== 'student') {
-    throw forbidden('Solo los estudiantes editan evidencias');
+  if (req.auth!.role !== 'student' && req.auth!.role !== 'admin') {
+    throw forbidden('Solo los estudiantes y administradores editan evidencias');
   }
   const evidenceId = objectIdSchema.parse(req.params.id);
   const input = saveEvidenceSchema.omit({ missionId: true, activityId: true }).parse(req.body);

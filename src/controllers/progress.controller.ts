@@ -24,8 +24,8 @@ export async function updatePhaseController(req: Request, res: Response): Promis
 }
 
 export async function completeActivityController(req: Request, res: Response): Promise<void> {
-  if (req.auth!.role !== 'student') {
-    throw forbidden('Solo los estudiantes completan actividades');
+  if (req.auth!.role !== 'student' && req.auth!.role !== 'admin') {
+    throw forbidden('Solo los estudiantes y administradores pueden completar actividades');
   }
 
   const payload = completeActivitySchema.parse(req.body ?? {});

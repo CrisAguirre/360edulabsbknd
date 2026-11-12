@@ -34,7 +34,7 @@ export async function getActivityController(req: Request, res: Response): Promis
 
 export async function startMissionController(req: Request, res: Response): Promise<void> {
   const code = missionCodeSchema.parse(req.params.missionCode);
-  await startMission(code, req.auth!.userId);
+  await startMission(code, req.auth!.userId, req.auth!.role);
   const mission = await getMissionDetail(code, req.auth!.userId, req.auth!.role);
   res.json({ data: mission, meta: { requestId: req.requestId } });
 }

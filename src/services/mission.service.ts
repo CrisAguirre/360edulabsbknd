@@ -108,11 +108,11 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
   };
 }
 
-export async function startMission(code: string, studentId: string) {
+export async function startMission(code: string, studentId: string, role: UserRole = 'student') {
   const mission = await Mission.findOne({ code: code.toLowerCase(), status: 'published' });
   if (!mission) throw notFound('Misión no encontrada');
 
-  if (mission.order > 1) {
+  if (mission.order > 1 && role === 'student') {
     const previous = await Mission.findOne({ order: mission.order - 1, status: 'published' });
     if (previous) {
       const previousProgress = await Progress.findOne({ studentId, missionId: previous._id });

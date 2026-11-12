@@ -14,8 +14,8 @@ export async function listMyBadgesController(req: Request, res: Response): Promi
 }
 
 export async function claimBadgeController(req: Request, res: Response): Promise<void> {
-  if (req.auth!.role !== 'student') {
-    throw forbidden('Solo los estudiantes reclaman insignias');
+  if (req.auth!.role !== 'student' && req.auth!.role !== 'admin') {
+    throw forbidden('Solo los estudiantes y administradores reclaman insignias');
   }
   const result = await claimBadge(req.auth!.userId, String(req.params.code));
   res.json({ data: result, meta: { requestId: req.requestId } });
