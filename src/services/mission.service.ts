@@ -3,7 +3,7 @@ import { Badge } from '../models/Badge';
 import { Mission, type MissionDocument, type MissionPhaseKey } from '../models/Mission';
 import { Progress, type ProgressDocument } from '../models/Progress';
 import { StudentBadge } from '../models/StudentBadge';
-import { AppError, forbidden, notFound } from '../utils/AppError';
+import { forbidden, notFound } from '../utils/AppError';
 import { sortActivities } from '../utils/activityOrder';
 import type { UserRole } from '../types/express';
 

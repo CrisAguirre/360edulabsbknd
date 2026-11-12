@@ -3,7 +3,7 @@ import { Types } from 'mongoose';
 import { Classroom } from '../models/Classroom';
 import { Enrollment } from '../models/Enrollment';
 import { RefreshToken } from '../models/RefreshToken';
-import { User, type UserDocument, type UserRole } from '../models/User';
+import { User, type UserRole } from '../models/User';
 import { hashPassword } from './auth.service';
 import { AppError, conflict, forbidden, notFound, ruleViolation } from '../utils/AppError';
 
@@ -74,7 +74,6 @@ interface UserRecord {
 
 async function buildUserViews(users: UserRecord[]): Promise<UserView[]> {
   const ids = users.map((user) => user._id as Types.ObjectId);
-  const stringIds = ids.map((id) => String(id));
 
   const [enrollments, taughtClassrooms] = await Promise.all([
     Enrollment.find({ studentId: { $in: ids }, status: 'active' })
