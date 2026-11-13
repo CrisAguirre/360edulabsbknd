@@ -41,9 +41,9 @@ export const badgeSeed: BadgeSeed[] = [
   },
   {
     code: 'cientifico-citoindagar',
-    name: 'Científico CitoIndagar 360',
+    name: 'Científico Laboratorio 360',
     description:
-      'Obtuviste las tres insignias de la ruta y presentaste tu bitácora como un verdadero científico de la Agencia.',
+      'Obtuviste las tres insignias de la ruta y presentaste tu bitácora como un verdadero científico del Laboratorio.',
     icon: '🏆',
     xpBonus: 100,
     order: 4,

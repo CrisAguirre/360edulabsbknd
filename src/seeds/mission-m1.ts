@@ -7,7 +7,7 @@ export const missionM1: SeedMission = {
   subtitle: 'Exploradores en busca de los secretos de la célula',
   bigQuestion: '¿De qué están hechos todos los seres vivos?',
   description:
-    'Una muestra misteriosa llegó al laboratorio de la Agencia CitoIndagar 360. Con Cito como guía, observarás una gota de agua, viajarás a la historia de la teoría celular y descubrirás por qué la célula es la unidad de la vida.',
+    'Una muestra misteriosa llegó al Laboratorio 360 La Célula. Con Cito como guía, observarás una gota de agua, viajarás a la historia de la teoría celular y descubrirás por qué la célula es la unidad de la vida.',
   objectives: [
     'Reconocer que todos los seres vivos están formados por una o más células.',
     'Identificar los postulados de la teoría celular.',
@@ -164,7 +164,7 @@ export const missionM1: SeedMission = {
       completionRule: { type: 'confirm', label: 'Exploré el microscopio y los tres postulados' },
       content: {
         model: 'microscope',
-        title: 'Microscopio de CitoIndagar',
+        title: 'Microscopio del Laboratorio 360',
         intro:
           'Arrastra para girar el modelo. Usa los botones de aumento y toca cada hotspot para descubrir qué hay dentro.',
         controls: ['Arrastrar para girar', 'Rueda o botones para acercar', 'Flechas del teclado para moverse'],

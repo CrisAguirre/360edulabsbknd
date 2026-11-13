@@ -19,7 +19,7 @@ async function main(): Promise<void> {
   const server = http.createServer(app);
 
   server.listen(config.port, () => {
-    logger.info(`CitoIndagar 360 API escuchando en http://localhost:${config.port}`);
+    logger.info(`Laboratorio 360 La Célula API escuchando en http://localhost:${config.port}`);
     logger.info(`Orígenes permitidos: ${config.clientOrigins.join(', ')}`);
   });
 

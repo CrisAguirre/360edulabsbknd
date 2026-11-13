@@ -7,7 +7,7 @@ healthRouter.get('/', (_req, res) => {
   res.json({
     data: {
       status: 'ok',
-      service: 'citoindagar360-api',
+      service: 'laboratorio360-api',
       version: '0.1.0',
       database: databaseStatus(),
       uptimeSeconds: Math.round(process.uptime()),

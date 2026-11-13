@@ -78,7 +78,7 @@ export const demoUsers: DemoUser[] = [
     username: 'admin',
     password: 'Admin2026*',
     role: 'admin',
-    displayName: 'Administrador CitoIndagar',
+    displayName: 'Administrador Lab 360',
     avatarKey: 'admin'
   }
 ];

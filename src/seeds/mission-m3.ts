@@ -332,7 +332,7 @@ export const missionM3: SeedMission = {
         tool: 'Canva',
         title: 'Diseña la fábrica de la vida',
         intro:
-          'Tu infografía debe explicar cómo las células obtienen energía y cómo usan el agua y los nutrientes. Puedes partir de la plantilla de CitoIndagar o crear tu propio diseño.',
+          'Tu infografía debe explicar cómo las células obtienen energía y cómo usan el agua y los nutrientes. Puedes partir de la plantilla del Laboratorio 360 o crear tu propio diseño.',
         guidingQuestions: [
           '¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida?',
           '¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos?'

@@ -98,7 +98,7 @@ export function createApp() {
   app.get('/', (_req, res) => {
     res.json({
       data: {
-        name: 'CitoIndagar 360 API',
+        name: 'Laboratorio 360 La Célula API',
         version: '0.1.0',
         docs: '/api/v1/health'
       }

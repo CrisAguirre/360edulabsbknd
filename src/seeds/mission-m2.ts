@@ -279,7 +279,7 @@ export const missionM2: SeedMission = {
       content: {
         title: 'Estación Quiver',
         intro:
-          'Quiver convierte tus dibujos en modelos con realidad aumentada. Usa las plantillas de CitoIndagar para colorear y luego observar tus células en 3D.',
+          'Quiver convierte tus dibujos en modelos con realidad aumentada. Usa las plantillas del Laboratorio 360 para colorear y luego observar tus células en 3D.',
         steps: [
           { title: 'Descarga', description: 'Descarga las plantillas de célula animal y vegetal en blanco y negro.' },
           { title: 'Colorea', description: 'Sigue el código de colores: verde para cloroplastos, azul para núcleo, amarillo para vacuola y naranja para mitocondrias.' },
