@@ -74,12 +74,13 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
   );
   const progress = await Progress.findOne({ studentId, missionId: mission._id }).lean();
 
+  let isLocked = false;
   if (!progress && mission.order > 1 && role === 'student') {
     const previous = await Mission.findOne({ order: mission.order - 1, status: 'published' }).lean();
     if (previous) {
       const previousProgress = await Progress.findOne({ studentId, missionId: previous._id }).lean();
       if (previousProgress?.status !== 'completed') {
-        throw forbidden('Primero completa la misión anterior');
+        isLocked = true;
       }
     }
   }
@@ -87,7 +88,7 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
   const completedIds = new Set(
     progress?.activities.filter((activity) => activity.status === 'completed').map((activity) => String(activity.activityId)) ?? []
   );
-  const status = progress?.status ?? (mission.order === 1 || role !== 'student' ? 'available' : 'locked');
+  const status = isLocked ? 'locked' : (progress?.status ?? (mission.order === 1 || role !== 'student' ? 'available' : 'locked'));
 
   return {
     ...mission,

@@ -144,18 +144,32 @@ export async function submitQuizAttempt(
   attempt.durationSeconds = durationSeconds;
   await attempt.save();
 
-  const progress = await Progress.findOne({ studentId, missionId: quiz.missionId });
-  if (progress) {
-    progress.bestQuizPercentage = Math.max(progress.bestQuizPercentage, result.percentage);
-    await progress.save();
-
-    const quizActivity = await Activity.findOne({ missionId: quiz.missionId, type: 'quiz' });
-    if (quizActivity && attempt.passed) {
-      await completeSystemActivity(studentId, String(quiz.missionId), String(quizActivity._id), quizActivity.xp);
-    }
-
-    await evaluateMissionCompletion(studentId, String(quiz.missionId));
+  let progress = await Progress.findOne({ studentId, missionId: quiz.missionId });
+  if (!progress) {
+    const missionActivities = await Activity.find({ missionId: quiz.missionId });
+    progress = await Progress.create({
+      studentId,
+      missionId: quiz.missionId,
+      status: 'in_progress',
+      currentPhase: 'cierre',
+      startedAt: new Date(),
+      activities: missionActivities.map((act) => ({
+        activityId: act._id,
+        status: 'pending',
+        attempts: 0
+      }))
+    });
   }
+
+  progress.bestQuizPercentage = Math.max(progress.bestQuizPercentage, result.percentage);
+  await progress.save();
+
+  const quizActivity = await Activity.findOne({ missionId: quiz.missionId, type: 'quiz' });
+  if (quizActivity && attempt.passed) {
+    await completeSystemActivity(studentId, String(quiz.missionId), String(quizActivity._id), quizActivity.xp);
+  }
+
+  await evaluateMissionCompletion(studentId, String(quiz.missionId));
 
   return {
     attemptId: String(attempt._id),
