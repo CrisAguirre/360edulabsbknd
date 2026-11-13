@@ -61,34 +61,41 @@ export const missionM1: SeedMission = {
           'Cito te invita a encogerte hasta el tamaño de un microbio. Gira la vista y descubre quién vive en una gota de agua.',
         narration: [
           'Cito: respira profundo. Estás dentro de una gota de agua tomada del estanque de la escuela.',
-          'A tu alrededor flotan seres invisibles a simple vista. Algunos se mueven con pequeños remos llamados cilios.',
-          'Observa sus formas: hay uno alargado, otro verde y pequeñas esferas que se dividen.',
-          'Todos ellos son seres vivos. ¿Qué crees que tienen en común?'
+          'A tu izquierda, observa una célula absorbiendo nutrientes del agua: su volumen aumenta gradualmente, un claro signo de crecimiento celular.',
+          'A tu derecha, fíjate en esa célula alargándose: su núcleo se duplica, su membrana se estrangula por el centro y se divide en dos células hijas vivas. ¡Es la reproducción celular en acción!',
+          'Crecimiento, reproducción y nutrición: todos los seres vivos unicelulares comparten estas funciones vitales.'
         ],
         organisms: [
           {
+            id: 'crecimiento-celular',
+            name: 'Signo de Crecimiento Celular',
+            icon: '🌱',
+            color: '#10b981',
+            fact: 'La célula viva asimila agua y nutrientes de la gota, aumentando su masa y volumen antes de poder dividirse.'
+          },
+          {
+            id: 'reproduccion-biparticion',
+            name: 'Signo de Reproducción (Bipartición)',
+            icon: '🧬',
+            color: '#f43f5e',
+            fact: 'Fisión binaria: La célula madre duplica su ADN, se estrangula en el centro y se divide en 2 células hijas independientes.'
+          },
+          {
             id: 'paramecio',
-            name: 'Paramecio',
+            name: 'Paramecio nadador',
             icon: '🦠',
-            color: '#7dd3fc',
-            fact: 'Es un ser vivo unicelular que se mueve con pequeños cilios.'
+            color: '#38bdf8',
+            fact: 'Microorganismo unicelular con cilios vibrantes que le permiten desplazarse y alimentarse en el agua.'
           },
           {
             id: 'alga',
-            name: 'Alga verde',
+            name: 'Alga verde fotosintética',
             icon: '🌿',
-            color: '#4ade80',
-            fact: 'Realiza fotosíntesis y produce oxígeno dentro del agua.'
-          },
-          {
-            id: 'bacteria',
-            name: 'Bacteria',
-            icon: '🧫',
-            color: '#fbbf24',
-            fact: 'Es un organismo unicelular sin núcleo definido.'
+            color: '#22c55e',
+            fact: 'Realiza fotosíntesis dentro de la gota, transformando luz solar en energía y liberando burbujas de oxígeno.'
           }
         ],
-        pauseQuestion: '¿Qué tienen en común estos tres seres vivos aunque parezcan tan distintos?',
+        pauseQuestion: '¿Qué signos de vida observaste en las células de la gota de agua (nutrición, crecimiento o reproducción)?',
         transcriptNote: 'La transcripción completa está disponible en el botón de accesibilidad.'
       },
       assetKeys: ['video360_gota_agua'],
