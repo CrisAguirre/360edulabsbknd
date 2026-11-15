@@ -151,8 +151,8 @@ export const missionM1: SeedMission = {
       order: 2,
       title: 'Dentro de una gota de agua',
       instructions:
-        'Ponte los audífonos, explora la escena 360 y observa con atención. Completa al menos el 80 % del recorrido para continuar.',
-      required: true,
+        'Exploración opcional. Ponte los audífonos, explora la escena 360 y observa con atención. No bloquea el avance de la sesión.',
+      required: false,
       completionRule: { type: 'video_progress', min: 80 },
       content: {
         durationSeconds: 30,
