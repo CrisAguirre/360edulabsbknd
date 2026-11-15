@@ -14,6 +14,7 @@ export interface MissionProgressView {
   bestQuizPercentage: number;
   completedActivities: number;
   totalActivities: number;
+  optionalActivities: number;
   startedAt?: Date | null;
   completedAt?: Date | null;
 }
@@ -27,9 +28,11 @@ export async function listMissions(studentId: string, role: UserRole) {
     .select('missionId required')
     .lean();
   const requiredIdsByMission = new Map<string, Set<string>>();
+  const totalIdsByMission = new Map<string, number>();
   for (const activity of activities) {
-    if (!activity.required) continue;
     const key = String(activity.missionId);
+    totalIdsByMission.set(key, (totalIdsByMission.get(key) ?? 0) + 1);
+    if (!activity.required) continue;
     const ids = requiredIdsByMission.get(key) ?? new Set<string>();
     ids.add(String(activity._id));
     requiredIdsByMission.set(key, ids);
@@ -40,6 +43,7 @@ export async function listMissions(studentId: string, role: UserRole) {
     const progress = progressMap.get(String(mission._id));
     const requiredIds = requiredIdsByMission.get(String(mission._id)) ?? new Set<string>();
     const totalActivities = requiredIds.size;
+    const optionalActivities = (totalIdsByMission.get(String(mission._id)) ?? 0) - requiredIds.size;
     const completedActivities = progress
       ? progress.activities.filter(
           (activity) => activity.status === 'completed' && requiredIds.has(String(activity.activityId))
@@ -58,6 +62,7 @@ export async function listMissions(studentId: string, role: UserRole) {
         bestQuizPercentage: progress?.bestQuizPercentage ?? 0,
         completedActivities,
         totalActivities,
+        optionalActivities,
         startedAt: progress?.startedAt ?? null,
         completedAt: progress?.completedAt ?? null
       } satisfies MissionProgressView
@@ -106,6 +111,7 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
       bestQuizPercentage: progress?.bestQuizPercentage ?? 0,
       completedActivities: [...completedIds].filter((id) => requiredIds.has(id)).length,
       totalActivities: requiredIds.size,
+      optionalActivities: activities.filter((activity) => !activity.required).length,
       startedAt: progress?.startedAt ?? null,
       completedAt: progress?.completedAt ?? null
     } satisfies MissionProgressView
