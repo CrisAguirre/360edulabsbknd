@@ -81,8 +81,12 @@ export const M2_PLANT_TEMPLATE_URL =
 export const M2_ANIMAL_TEMPLATE_URL =
   'https://drive.google.com/file/d/1euCki6yPm4LXeIMCyWAKvnBfRPPVmJmu/view?usp=sharing';
 
+export const M2_YOUTUBE_URL = 'https://www.youtube.com/watch?v=h1gryskdtmk';
+export const M2_YOUTUBE_EMBED_URL = 'https://www.youtube-nocookie.com/embed/h1gryskdtmk';
+
 export const M2_RESOURCES: SourceResource[] = [
   { label: 'Video 360 de la célula y sus partes' },
+  { label: 'Video interactivo YouTube: Estructura y partes de la célula', url: M2_YOUTUBE_URL },
   { label: 'Aplicación de RA Quiver' },
   { label: 'Célula vegetal (plantilla Google Drive)', url: M2_PLANT_TEMPLATE_URL },
   { label: 'Célula animal (plantilla Google Drive)', url: M2_ANIMAL_TEMPLATE_URL },

@@ -8,7 +8,9 @@ import {
   M2_QUIVER,
   M2_RESOURCES,
   M2_SESSION,
-  M2_VIDEO
+  M2_VIDEO,
+  M2_YOUTUBE_EMBED_URL,
+  M2_YOUTUBE_URL
 } from './officialSource';
 
 export const missionM2: SeedMission = {
@@ -66,11 +68,11 @@ export const missionM2: SeedMission = {
       order: 1,
       title: 'Sesión 2: Construyendo el concepto de célula',
       instructions:
-        'Explora el recurso multimedial y las semejanzas y diferencias entre célula animal y vegetal, y descarga las plantillas Quiver. La pregunta de indagación se responde en la actividad de cierre «Mi mapa de la célula».',
+        'Explora las sub-actividades de la sesión (2.1 a 2.6): saberes previos, célula vegetal, célula animal, responde la pregunta de indagación en la plataforma Vercel, visualiza el modelo 360 y video interactivo, y colorea las plantillas Quiver.',
       required: true,
       completionRule: {
         type: 'confirm',
-        label: 'He explorado los conceptos y descargado las plantillas Quiver'
+        label: 'He completado las sub-actividades de la sesión y enviado mi respuesta'
       },
       content: {
         sessionNumber: 2,
@@ -89,12 +91,67 @@ export const missionM2: SeedMission = {
         animalTemplateDriveUrl:
           'https://drive.google.com/file/d/1euCki6yPm4LXeIMCyWAKvnBfRPPVmJmu/view?usp=sharing',
         hasQuiver: true,
-        hasEvidenceResponse: false,
+        hasEvidenceResponse: true,
         platformResource: 'Plataforma Vercel',
         sourceSession: M2_SESSION,
         sourceSection: 'Descripción de la actividad',
         sourceExcerpt: [M2_INTRO, M2_QUESTION, M2_VIDEO, M2_ANSWER, M2_QUIVER],
-        sourceResources: M2_RESOURCES,
+        sourceResources: [
+          ...M2_RESOURCES,
+          {
+            label: 'Video interactivo YouTube: Estructura y partes de la célula',
+            url: M2_YOUTUBE_URL
+          }
+        ],
+        videoUrl: M2_YOUTUBE_URL,
+        videoEmbedUrl: M2_YOUTUBE_EMBED_URL,
+        videoTitle: 'Video interactivo: Estructura y partes de la célula',
+        videoDescription:
+          'Explicación visual inmersiva de los organelos celulares, sus funciones especializadas y la comparación estructural entre seres vivos vegetales y animales.',
+        videoPurposes: [
+          'Identificar la localización y aspecto tridimensional de cada organelo.',
+          'Entender por qué las células vegetales tienen cloroplastos y pared celular mientras las animales no las necesitan.',
+          'Reconocer la función vital del núcleo, mitocondria, membrana y citoplasma en el funcionamiento diario del organismo.',
+          'Preparar argumentos fundamentados para responder la pregunta de indagación en la plataforma Vercel.'
+        ],
+        subactivities: {
+          s21: {
+            number: '2.1',
+            title: 'Introducción y reconocimiento de saberes previos',
+            text: M2_INTRO
+          },
+          s22: {
+            number: '2.2',
+            title: 'Célula Vegetal',
+            driveUrl: M2_PLANT_TEMPLATE_URL,
+            description: 'Plantilla y ficha interactiva de la Célula Vegetal con pared celular de celulosa, cloroplastos con clorofila, gran vacuola central y forma poliédrica.'
+          },
+          s23: {
+            number: '2.3',
+            title: 'Célula Animal',
+            driveUrl: M2_ANIMAL_TEMPLATE_URL,
+            description: 'Plantilla y ficha interactiva de la Célula Animal con membrana plasmática elástica, núcleo central, mitocondrias dinámicas y nutrición heterótrofa.'
+          },
+          s24: {
+            number: '2.4',
+            title: 'Planteamiento de la pregunta y Espacio Virtual Vercel',
+            question: M2_QUESTION,
+            platform: 'Plataforma Vercel'
+          },
+          s25: {
+            number: '2.5',
+            title: 'Presentación del modelo 360 y video interactivo',
+            videoUrl: M2_YOUTUBE_URL,
+            videoEmbedUrl: M2_YOUTUBE_EMBED_URL,
+            model3dDescription: 'Modelo 3D y vista panorámica 360 de la célula animal y vegetal con exploración de organelos.'
+          },
+          s26: {
+            number: '2.6',
+            title: 'Material impreso Quiver y Análisis Comparativo',
+            instructions: M2_QUIVER,
+            comparisonTableSummary: '7 estructuras celulares comparadas: Membrana, Núcleo, Citoplasma, Mitocondrias, Vacuolas, Pared celular y Cloroplastos.'
+          }
+        },
         title: 'Animal o vegetal: dos formas de ser célula',
         intro:
           'Las células animales y vegetales comparten muchas estructuras, pero también tienen diferencias que les permiten vivir de formas distintas. Ninguna es mejor: cada una está adaptada a su manera de obtener alimento y relacionarse con el ambiente.',
