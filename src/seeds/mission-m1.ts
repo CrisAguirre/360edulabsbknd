@@ -5,7 +5,8 @@ export const missionM1: SeedMission = {
   order: 1,
   title: '¡Misión microscópica!',
   subtitle: 'Exploradores en busca de los secretos de la célula',
-  bigQuestion: '¿De qué están hechos todos los seres vivos?',
+  bigQuestion:
+    '¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿Se imaginan cómo son y qué hacen para mantenernos vivos?',
   description:
     'Una muestra misteriosa llegó al Laboratorio 360 La Célula. Con Cito como guía, observarás una gota de agua, viajarás a la historia de la teoría celular y descubrirás por qué la célula es la unidad de la vida.',
   objectives: [
@@ -114,6 +115,13 @@ export const missionM1: SeedMission = {
         title: 'La extraña historia de la teoría celular',
         intro:
           'Durante siglos, los seres vivos fueron un misterio. Nadie sabía de qué estaban hechos ni por qué crecían. Todo cambió cuando varias personas se atrevieron a mirar más allá de lo que el ojo podía ver.',
+        videoTitle: 'La extraña historia de la teoría celular',
+        videoUrl: 'https://youtu.be/OOXO3fGImoU',
+        videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/OOXO3fGImoU',
+        docUrl:
+          'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
+        mandatoryQuestion:
+          'Identifique dos ideas mencionadas en la lectura que usted considera importantes para el estudio de la biología. Argumente cada una de ellas.',
         scientists: [
           {
             name: 'Robert Hooke',
@@ -145,9 +153,10 @@ export const missionM1: SeedMission = {
           }
         ],
         postulates: [
-          'Todos los seres vivos están formados por una o más células.',
-          'La célula es la unidad estructural y funcional de la vida.',
-          'Toda célula proviene de otra célula.'
+          'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
+          'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
+          'Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas".',
+          'La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir.'
         ],
         glossary: [
           { term: 'Célula', definition: 'Unidad más pequeña que forma a los seres vivos y realiza sus funciones vitales.' },

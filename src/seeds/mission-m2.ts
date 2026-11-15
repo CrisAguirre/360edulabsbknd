@@ -5,7 +5,8 @@ export const missionM2: SeedMission = {
   order: 2,
   title: '¡Misión celular!',
   subtitle: 'Descifrando el secreto de la unidad de la vida',
-  bigQuestion: '¿Son iguales las células de nuestro cuerpo y las de una planta?',
+  bigQuestion:
+    '¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar?',
   description:
     'La muestra misteriosa se abre y revela dos mundos: células animales y células vegetales. Compararás sus partes, usarás el Cubo Merge y descubrirás que cada estructura cumple una función dentro del sistema celular.',
   objectives: [
@@ -279,7 +280,11 @@ export const missionM2: SeedMission = {
       content: {
         title: 'Estación Quiver',
         intro:
-          'Quiver convierte tus dibujos en modelos con realidad aumentada. Usa las plantillas del Laboratorio 360 para colorear y luego observar tus células en 3D.',
+          'Quiver convierte tus dibujos en modelos con realidad aumentada. Usa las plantillas oficiales del Laboratorio 360 para colorear y luego observar tus células en 3D.',
+        plantTemplateDriveUrl:
+          'https://drive.google.com/file/d/1Rc_5xG1CsOAcfSwXpzT3dA5aBwOfNMMa/view?usp=sharing',
+        animalTemplateDriveUrl:
+          'https://drive.google.com/file/d/1euCki6yPm4LXeIMCyWAKvnBfRPPVmJmu/view?usp=sharing',
         steps: [
           { title: 'Descarga', description: 'Descarga las plantillas de célula animal y vegetal en blanco y negro.' },
           { title: 'Colorea', description: 'Sigue el código de colores: verde para cloroplastos, azul para núcleo, amarillo para vacuola y naranja para mitocondrias.' },

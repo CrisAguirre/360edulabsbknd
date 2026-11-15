@@ -5,7 +5,8 @@ export const missionM3: SeedMission = {
   order: 3,
   title: '¡Misión energía!',
   subtitle: 'Descubriendo la fábrica de la vida celular',
-  bigQuestion: '¿Cómo obtienen y usan la energía las células?',
+  bigQuestion:
+    '¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan?',
   description:
     'La célula es una fábrica que necesita energía, agua y materiales. En esta misión explorarás el metabolismo celular, el trabajo de las mitocondrias y los cloroplastos, la ósmosis y el equilibrio que mantiene viva a la célula.',
   objectives: [
@@ -124,6 +125,8 @@ export const missionM3: SeedMission = {
       completionRule: { type: 'confirm', label: 'Ya leí y comprendí el metabolismo' },
       content: {
         title: '¿Cómo obtienen y utilizan la energía las células?',
+        docUrl:
+          'https://docs.google.com/document/d/1RNF1OnvpUMINXE-p-D-T9ZF2B6ycDj3x/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
         intro:
           'Las células necesitan energía para crecer, repararse, mover sustancias y reproducirse. Esa energía se obtiene de los nutrientes y se transforma en una molécula llamada ATP, que funciona como una pequeña batería de uso inmediato.',
         sections: [
@@ -366,8 +369,16 @@ export const missionM3: SeedMission = {
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
-          'Comparte el enlace público de tu infografía de Canva. Luego escribe la tabla de estructuras y funciones (membrana, citoplasma, núcleo, mitocondria, cloroplasto y vacuola) y una reflexión sobre por qué la energía es indispensable para la vida.',
+          'Comparte el enlace público de tu infografía de Canva. Luego completa el cuadro con la función principal de cada una de las 6 estructuras celulares y una reflexión sobre por qué la energía es indispensable para la vida.',
         requiresLink: true,
+        structuresTable: [
+          { id: 'membrana', name: 'Membrana celular', placeholder: 'Describe la función principal de la membrana celular...' },
+          { id: 'cloroplastos', name: 'Cloroplastos', placeholder: 'Describe la función principal de los cloroplastos...' },
+          { id: 'mitocondrias', name: 'Mitocondrias', placeholder: 'Describe la función principal de las mitocondrias...' },
+          { id: 'citoplasma', name: 'Citoplasma', placeholder: 'Describe la función principal del citoplasma...' },
+          { id: 'vacuola', name: 'Vacuola central', placeholder: 'Describe la función principal de la vacuola central...' },
+          { id: 'nucleo', name: 'Núcleo', placeholder: 'Describe la función principal del núcleo...' }
+        ],
         minLength: 100,
         checklist: [
           'El enlace de Canva es público y de solo lectura.',
