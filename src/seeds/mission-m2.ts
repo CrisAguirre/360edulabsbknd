@@ -1,4 +1,15 @@
 import type { SeedMission } from './mission-types';
+import {
+  M2_ANIMAL_TEMPLATE_URL,
+  M2_ANSWER,
+  M2_INTRO,
+  M2_PLANT_TEMPLATE_URL,
+  M2_QUESTION,
+  M2_QUIVER,
+  M2_RESOURCES,
+  M2_SESSION,
+  M2_VIDEO
+} from './officialSource';
 
 export const missionM2: SeedMission = {
   code: 'm2',
@@ -20,19 +31,22 @@ export const missionM2: SeedMission = {
     {
       key: 'inicio',
       title: 'Inicio: dos células, un misterio',
-      description: 'Observa una hoja y tu piel, y formula tus primeras hipótesis.',
+      description:
+        'Texto oficial de la Sesión 2: pregunta motivadora y video 360 de la célula y sus partes.',
       order: 1
     },
     {
       key: 'desarrollo',
       title: 'Desarrollo: células bajo la lupa',
-      description: 'Compara modelos 3D, explora el cubo AR y colorea tus plantillas Quiver.',
+      description:
+        'Estación Quiver obligatoria. Modelos 3D, cubo y animaciones como exploración opcional.',
       order: 2
     },
     {
       key: 'cierre',
       title: 'Cierre: mi mapa de la célula',
-      description: 'Construye tu comparación, responde el quiz y gana la insignia.',
+      description:
+        'Responde la pregunta de indagación, presenta tu comparación y gana la insignia.',
       order: 3
     }
   ],
@@ -52,11 +66,11 @@ export const missionM2: SeedMission = {
       order: 1,
       title: 'Sesión 2: Construyendo el concepto de célula',
       instructions:
-        'Visualiza el recurso multimedial, explora las semejanzas y diferencias entre célula animal y vegetal, descarga las plantillas Quiver y responde la pregunta en la plataforma Vercel.',
+        'Explora el recurso multimedial y las semejanzas y diferencias entre célula animal y vegetal, y descarga las plantillas Quiver. La pregunta de indagación se responde en la actividad de cierre «Mi mapa de la célula».',
       required: true,
       completionRule: {
         type: 'confirm',
-        label: 'He explorado los conceptos, descargado las plantillas Quiver y respondido el planteamiento en Vercel'
+        label: 'He explorado los conceptos y descargado las plantillas Quiver'
       },
       content: {
         sessionNumber: 2,
@@ -65,7 +79,7 @@ export const missionM2: SeedMission = {
         subtheme1: 'Subtema 1. Partes o componentes de la célula',
         subtheme2: 'Subtema 2. Funciones de los componentes de la célula',
         activityDescription:
-          'A partir de la identificación de la célula como unidad estructural y funcional de los seres vivos, la docente, busca reconocer los saberes previos de los estudiantes de grado 5.º sobre la clasificación de las células, especialmente las animales y vegetales, así como identificar sus conocimientos acerca de las principales estructuras celulares y sus funciones, promoviendo la curiosidad, la participación y la construcción colectiva del conocimiento, planteando la pregunta ¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar? Para dar respuesta al planteamiento, la docente invita a los estudiantes a visualizar el video 360 de la célula y sus partes Los estudiantes dan respuesta al planteamiento en la plataforma Vercel A fin de afianzar el concepto de la célula y sus partes, la docente proporciona material impreso de Quiver y solicita a los estudiantes colorear la estructura de la célula vegetal y animal, posterior a ello, cada grupo de estudiantes proyecta la imagen a través de la aplicación de Quiver e identifican las semejanzas y diferencias de la estructura entre la célula animal y vegetal',
+          'A partir de la identificación de la célula como unidad estructural y funcional de los seres vivos, la docente, busca reconocer los saberes previos de los estudiantes de grado 5.º sobre la clasificación de las células, especialmente las animales y vegetales, así como identificar sus conocimientos acerca de las principales estructuras celulares y sus funciones, promoviendo la curiosidad, la participación y la construcción colectiva del conocimiento, planteando la pregunta\n\n¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar?\n\nPara dar respuesta al planteamiento, la docente invita a los estudiantes a visualizar el video 360 de la célula y sus partes\n\nLos estudiantes dan respuesta al planteamiento en la plataforma Vercel\n\nA fin de afianzar el concepto de la célula y sus partes, la docente proporciona material impreso de Quiver y solicita a los estudiantes colorear la estructura de la célula vegetal y animal, posterior a ello, cada grupo de estudiantes proyecta la imagen a través de la aplicación de Quiver e identifican las semejanzas y diferencias de la estructura entre la célula animal y vegetal',
         initialQuestion:
           '¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar?',
         mandatoryQuestion:
@@ -75,8 +89,12 @@ export const missionM2: SeedMission = {
         animalTemplateDriveUrl:
           'https://drive.google.com/file/d/1euCki6yPm4LXeIMCyWAKvnBfRPPVmJmu/view?usp=sharing',
         hasQuiver: true,
-        hasEvidenceResponse: true,
+        hasEvidenceResponse: false,
         platformResource: 'Plataforma Vercel',
+        sourceSession: M2_SESSION,
+        sourceSection: 'Descripción de la actividad',
+        sourceExcerpt: [M2_INTRO, M2_QUESTION, M2_VIDEO, M2_ANSWER, M2_QUIVER],
+        sourceResources: M2_RESOURCES,
         title: 'Animal o vegetal: dos formas de ser célula',
         intro:
           'Las células animales y vegetales comparten muchas estructuras, pero también tienen diferencias que les permiten vivir de formas distintas. Ninguna es mejor: cada una está adaptada a su manera de obtener alimento y relacionarse con el ambiente.',
@@ -148,7 +166,11 @@ export const missionM2: SeedMission = {
           { id: 'cloroplasto', name: 'Cloroplastos', icon: '🌿', fact: 'Captan luz para hacer fotosíntesis.' }
         ],
         pauseQuestion: '¿Qué estructuras crees que solo tiene la célula vegetal?',
-        transcriptNote: 'Puedes activar la transcripción y los subtítulos desde el reproductor.'
+        transcriptNote: 'Puedes activar la transcripción y los subtítulos desde el reproductor.',
+        sourceSession: M2_SESSION,
+        sourceSection: 'Recurso obligatorio de la sesión',
+        sourceExcerpt: [M2_VIDEO],
+        sourceResources: [{ label: 'Video 360 de la célula y sus partes' }]
       },
       assetKeys: ['video360_celula_partes'],
       xp: 20
@@ -156,11 +178,11 @@ export const missionM2: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'model3d',
-      order: 1,
+      order: 2,
       title: 'Células animal y vegetal en 3D',
       instructions:
-        'Gira los modelos, cambia entre célula animal y vegetal, activa las capas y toca los hotspots para conocer cada organelo.',
-      required: true,
+        'Exploración opcional. Gira los modelos, cambia entre célula animal y vegetal, activa las capas y toca los hotspots para conocer cada organelo.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Exploré ambos modelos y sus organelos' },
       content: {
         model: 'cell-compare',
@@ -200,11 +222,11 @@ export const missionM2: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'animation3d',
-      order: 2,
+      order: 3,
       title: 'Comparación celular: recorrido por organelos',
       instructions:
-        'Observa el recorrido de la cámara por los organelos y fíjate en el resaltado secuencial. Luego completa la actividad.',
-      required: true,
+        'Exploración opcional. Observa el recorrido de la cámara por los organelos y fíjate en el resaltado secuencial. Luego completa la actividad.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Vi la comparación completa' },
       content: {
         title: 'Célula animal vs. célula vegetal',
@@ -226,11 +248,11 @@ export const missionM2: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'ar_cube',
-      order: 3,
+      order: 4,
       title: 'Cubo celular',
       instructions:
-        'Explora al menos 4 de las 6 caras del Cubo Merge y asocia cada estructura con su función.',
-      required: true,
+        'Exploración opcional. Explora al menos 4 de las 6 caras del Cubo Merge y asocia cada estructura con su función.',
+      required: false,
       completionRule: { type: 'faces_explored', min: 4 },
       content: {
         cubeTitle: 'Cubo celular',
@@ -292,7 +314,7 @@ export const missionM2: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'quiver',
-      order: 4,
+      order: 1,
       title: 'Estación Quiver: colorea y observa',
       instructions:
         'Imprime o descarga las plantillas, colorea la célula animal y la vegetal, escanéalas con Quiver y sube una foto clara en tu evidencia final.',
@@ -325,7 +347,14 @@ export const missionM2: SeedMission = {
           'Identifiqué al menos cinco estructuras.',
           'La foto muestra el modelo completo y con buena luz.'
         ],
-        downloadNote: 'Las plantillas se entregan como PDF para imprimir. También puedes colorearlas en pantalla si tu docente lo indica.'
+        downloadNote: 'Las plantillas se entregan como PDF para imprimir. También puedes colorearlas en pantalla si tu docente lo indica.',
+        sourceSession: M2_SESSION,
+        sourceSection: 'Estación Quiver (obligatoria)',
+        sourceExcerpt: [M2_QUIVER],
+        sourceResources: [
+          { label: 'Célula vegetal (plantilla Google Drive)', url: M2_PLANT_TEMPLATE_URL },
+          { label: 'Célula animal (plantilla Google Drive)', url: M2_ANIMAL_TEMPLATE_URL }
+        ]
       },
       assetKeys: ['quiver_plantilla_animal', 'quiver_plantilla_vegetal'],
       xp: 10
@@ -336,8 +365,8 @@ export const missionM2: SeedMission = {
       order: 5,
       title: 'Tarjetas y comparador de organelos',
       instructions:
-        'Abre las tarjetas de organelos y usa el comparador para descubrir diferencias de tamaño y cantidad entre ambas células.',
-      required: true,
+        'Exploración opcional. Abre las tarjetas de organelos y usa el comparador para descubrir diferencias de tamaño y cantidad entre ambas células.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Exploré las tarjetas y el comparador' },
       content: {
         component: 'SpotlightCard',
@@ -369,12 +398,12 @@ export const missionM2: SeedMission = {
       order: 1,
       title: 'Mi mapa de la célula',
       instructions:
-        'Sube una foto de tu modelo Quiver, escribe tu tabla comparativa con al menos cuatro diferencias y responde la reflexión final.',
+        'Responde la pregunta de indagación de la Sesión 2 y presenta tu mapa de la célula: foto o enlace del modelo Quiver, cuatro diferencias y reflexión final.',
       required: true,
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
-          'Presenta tu mapa de la célula: describe la foto de tu modelo Quiver, escribe al menos cuatro diferencias entre célula animal y vegetal y responde: ¿qué parte de la célula te sorprendió más y por qué? Puedes agregar el enlace de tu foto o de un documento.',
+          '¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar? Responde con tus palabras y acompaña tu respuesta con la foto o el enlace de tu modelo Quiver, al menos cuatro diferencias entre célula animal y vegetal y la reflexión final.',
         minLength: 100,
         checklist: [
           'Mi foto o enlace muestra el modelo Quiver coloreado.',
@@ -387,7 +416,11 @@ export const missionM2: SeedMission = {
           { level: 'Básico', description: 'Foto legible y una diferencia.' },
           { level: 'Alto', description: 'Foto clara, cuatro diferencias y reflexión.' },
           { level: 'Superior', description: 'Comparación completa, vocabulario preciso y relación estructura-función.' }
-        ]
+        ],
+        sourceSession: M2_SESSION,
+        sourceSection: 'Pregunta de indagación',
+        sourceExcerpt: [M2_ANSWER, M2_QUESTION],
+        sourceResources: [{ label: 'Plataforma Vercel (espacio virtual de la sesión)' }]
       },
       assetKeys: [],
       xp: 20
@@ -404,7 +437,12 @@ export const missionM2: SeedMission = {
       content: {
         questionCount: 8,
         passScore: 70,
-        note: 'Incluye preguntas de comparación y una identificación en el modelo 3D.'
+        note: 'Incluye preguntas de comparación y una identificación en el modelo 3D.',
+        sourceSession: M2_SESSION,
+        sourceSection: 'Cierre de la sesión',
+        sourceExcerpt: [M2_QUESTION],
+        sourceNote:
+          'El reto final no aparece en el documento curricular: es el componente de gamificación de la misión. Comprueba los aprendizajes de la Sesión 2: estructuras celulares, funciones y comparación entre célula animal y vegetal.'
       },
       assetKeys: [],
       xp: 30

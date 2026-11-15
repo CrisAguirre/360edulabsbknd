@@ -109,7 +109,7 @@ export const progressScenarios: ProgressScenario[] = [
   {
     username: 'estudiante01',
     completedMissions: [],
-    inProgress: { missionCode: 'm1', completedRequired: 4 }
+    inProgress: { missionCode: 'm1', completedRequired: 2 }
   },
   {
     username: 'estudiante02',

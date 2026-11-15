@@ -1,4 +1,14 @@
 import type { SeedMission } from './mission-types';
+import {
+  M1_CONCEPT,
+  M1_OPENING,
+  M1_PARTICIPATION,
+  M1_POSTULATES,
+  M1_QUESTION,
+  M1_REQUEST,
+  M1_RESOURCES,
+  M1_SESSION
+} from './officialSource';
 
 export const missionM1: SeedMission = {
   code: 'm1',
@@ -19,19 +29,22 @@ export const missionM1: SeedMission = {
     {
       key: 'inicio',
       title: 'Inicio: la muestra misteriosa',
-      description: 'Observa, pregunta y activa lo que ya sabes sobre los seres vivos.',
+      description:
+        'Texto oficial de la Sesión 1: pregunta motivadora, video, lectura y postulados de la teoría celular.',
       order: 1
     },
     {
       key: 'desarrollo',
       title: 'Desarrollo: viaje al interior de la vida',
-      description: 'Explora el microscopio 3D, el cubo AR y las animaciones de la teoría celular.',
+      description:
+        'Exploración opcional: microscopio 3D, cubo de la teoría celular y animaciones de apoyo.',
       order: 2
     },
     {
       key: 'cierre',
       title: 'Cierre: demuestra lo que descubriste',
-      description: 'Argumenta con evidencias, responde el quiz y recibe tu insignia.',
+      description:
+        'Responde la pregunta de indagación del documento y presenta el reto final para ganar tu insignia.',
       order: 3
     }
   ],
@@ -51,9 +64,9 @@ export const missionM1: SeedMission = {
       order: 1,
       title: 'Sesión 1: ¡Misión microscópica! Acercamiento a la teoría celular',
       instructions:
-        'Visualiza el recurso multimedial, realiza la lectura oficial y responde a la pregunta de indagación en el espacio virtual de la plataforma.',
+        'Visualiza el recurso multimedial y realiza la lectura oficial de la Sesión 1. Revisa la pregunta de indagación: la responderás en la actividad de cierre «Dos ideas que cambian la mirada».',
       required: true,
-      completionRule: { type: 'confirm', label: 'He realizado la lectura, visto el video y respondido la pregunta' },
+      completionRule: { type: 'confirm', label: 'He realizado la lectura y visto el video de la Sesión 1' },
       content: {
         sessionNumber: 1,
         sessionTitle: 'Sesión 1: ¡Misión microscópica! Exploradores en busca de los secretos de la célula',
@@ -61,7 +74,7 @@ export const missionM1: SeedMission = {
         subtheme1: 'Subtema 1. Teoría Celular',
         subtheme2: 'Subtema 2. La célula como unidad estructural y funcional',
         activityDescription:
-          'La docente inicia la sesión motivando a los estudiantes a dar respuesta a la pregunta ¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos? Los estudiantes participan de forma oral y escrita en la plataforma, dan a conocer sus aportes y socializan con el grupo sus ideas, la docente, proyecta un recurso multimedial que explica los aportes, sus inicios y representantes en la construcción del conocimiento de lo que actualmente se reconoce como teoría celular, La docente realiza un aporte conceptual explicando que La Teoría celular explica por qué razón la célula es la unidad estructural y funcional de todos los seres vivos que habitan el planeta, excepto los virus que son acelulares. Incluye los siguientes postulados: • Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares). • Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas. • Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas". • La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir. Se solicita los estudiantes visualizar el video y realizar la lectura que se aloja en la plataforma para dar respuesta a la siguiente pregunta en el espacio virtual de la plataforma Vercel.',
+          'La docente inicia la sesión motivando a los estudiantes a dar respuesta a la pregunta ¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos?\n\nLos estudiantes participan de forma oral y escrita en la plataforma, dan a conocer sus aportes y socializan con el grupo sus ideas, la docente, proyecta un recurso multimedial que explica los aportes, sus inicios y representantes en la construcción del conocimiento de lo que actualmente se reconoce como teoría celular,\n\nLa docente realiza un aporte conceptual explicando que La Teoría celular explica por qué razón la célula es la unidad estructural y funcional de todos los seres vivos que habitan el planeta, excepto los virus que son acelulares. Incluye los siguientes postulados:\n\n• Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).\n\n• Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.\n\n• Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas".\n\n• La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir.\n\nSe solicita los estudiantes visualizar el video y realizar la lectura que se aloja en la plataforma para dar respuesta a la siguiente pregunta en el espacio virtual de la plataforma Vercel.',
         initialQuestion:
           '¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos?',
         mandatoryQuestion:
@@ -72,7 +85,18 @@ export const missionM1: SeedMission = {
         docUrl:
           'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
         platformResource: 'Plataforma Vercel',
-        hasEvidenceResponse: true,
+        hasEvidenceResponse: false,
+        sourceSession: M1_SESSION,
+        sourceSection: 'Descripción de la actividad',
+        sourceExcerpt: [
+          M1_OPENING,
+          M1_PARTICIPATION,
+          M1_CONCEPT,
+          ...M1_POSTULATES,
+          M1_REQUEST,
+          M1_QUESTION
+        ],
+        sourceResources: M1_RESOURCES,
         postulates: [
           'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
           'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
@@ -173,7 +197,12 @@ export const missionM1: SeedMission = {
           }
         ],
         pauseQuestion: '¿Qué signos de vida observaste en las células de la gota de agua (nutrición, crecimiento o reproducción)?',
-        transcriptNote: 'La transcripción completa está disponible en el botón de accesibilidad.'
+        transcriptNote: 'La transcripción completa está disponible en el botón de accesibilidad.',
+        sourceSession: M1_SESSION,
+        sourceSection: 'Pregunta motivadora de la sesión',
+        sourceExcerpt: [M1_OPENING],
+        sourceNote:
+          'El documento invita a imaginar cómo son esas estructuras invisibles y qué hacen para mantenernos vivos. Esta escena 360 responde a esa invitación observando células en una gota de agua.'
       },
       assetKeys: ['video360_gota_agua'],
       xp: 20
@@ -184,8 +213,8 @@ export const missionM1: SeedMission = {
       order: 1,
       title: 'El microscopio y la célula',
       instructions:
-        'Gira el microscopio, cambia el aumento y toca los puntos brillantes para descubrir los tres postulados de la teoría celular.',
-      required: true,
+        'Exploración opcional. Gira el microscopio, cambia el aumento y toca los puntos brillantes para descubrir los tres postulados de la teoría celular.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Exploré el microscopio y los tres postulados' },
       content: {
         model: 'microscope',
@@ -239,8 +268,8 @@ export const missionM1: SeedMission = {
       order: 2,
       title: 'Cubo de la teoría celular',
       instructions:
-        'Explora al menos 4 de las 6 caras del Cubo Merge. Gíralo con el ratón, el dedo o las flechas del teclado.',
-      required: true,
+        'Exploración opcional. Explora al menos 4 de las 6 caras del Cubo Merge. Gíralo con el ratón, el dedo o las flechas del teclado.',
+      required: false,
       completionRule: { type: 'faces_explored', min: 4 },
       content: {
         cubeTitle: 'Cubo de la teoría celular',
@@ -305,8 +334,8 @@ export const missionM1: SeedMission = {
       order: 3,
       title: 'Zoom microscópico: del organismo a la célula',
       instructions:
-        'Observa la animación y sigue el viaje de la cámara: desde un organismo completo hasta una célula y su núcleo.',
-      required: true,
+        'Exploración opcional. Observa la animación y sigue el viaje de la cámara: desde un organismo completo hasta una célula y su núcleo.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Vi la animación completa' },
       content: {
         title: 'Zoom microscópico',
@@ -330,8 +359,8 @@ export const missionM1: SeedMission = {
       order: 4,
       title: 'Línea de tiempo de los científicos',
       instructions:
-        'Recorre la línea de tiempo, abre cada tarjeta y descubre cómo cada científico aportó una pieza de la teoría celular.',
-      required: true,
+        'Exploración opcional. Recorre la línea de tiempo, abre cada tarjeta y descubre cómo cada científico aportó una pieza de la teoría celular.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Recorrí la línea de tiempo completa' },
       content: {
         component: 'AnimatedList',
@@ -362,12 +391,12 @@ export const missionM1: SeedMission = {
       order: 1,
       title: 'Dos ideas que cambian la mirada',
       instructions:
-        'Elige dos ideas de la lectura y explica por qué son importantes para estudiar la biología. Puedes guardar un borrador antes de enviar.',
+        'Responde la pregunta de indagación de la Sesión 1: identifica dos ideas de la lectura y argumenta cada una con tus propias palabras. Puedes guardar un borrador antes de enviar.',
       required: true,
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
-          'Identifica dos ideas de la lectura que consideres importantes para estudiar la biología y argumenta cada una. Usa tus propias palabras y relaciona las ideas con la teoría celular.',
+          'Identifique dos ideas mencionadas en la lectura que usted considera importantes para el estudio de la biología. Argumente cada una de ellas. Usa tus propias palabras, relaciónalas con la teoría celular y explica por qué son importantes.',
         minLength: 80,
         checklist: [
           'Nombro dos ideas de la lectura.',
@@ -380,7 +409,11 @@ export const missionM1: SeedMission = {
           { level: 'Básico', description: 'Explica una idea con vocabulario limitado.' },
           { level: 'Alto', description: 'Explica dos ideas con vocabulario científico.' },
           { level: 'Superior', description: 'Conecta las ideas con la teoría celular y da un ejemplo propio.' }
-        ]
+        ],
+        sourceSession: M1_SESSION,
+        sourceSection: 'Pregunta de indagación',
+        sourceExcerpt: [M1_REQUEST, M1_QUESTION],
+        sourceResources: [{ label: 'Plataforma Vercel (espacio virtual de la sesión)' }]
       },
       assetKeys: [],
       xp: 20
@@ -397,7 +430,12 @@ export const missionM1: SeedMission = {
       content: {
         questionCount: 6,
         passScore: 70,
-        note: 'Cada respuesta recibe retroalimentación. La insignia se entrega al completar todas las actividades y aprobar el quiz.'
+        note: 'Cada respuesta recibe retroalimentación. La insignia se entrega al completar todas las actividades y aprobar el quiz.',
+        sourceSession: M1_SESSION,
+        sourceSection: 'Cierre de la sesión',
+        sourceExcerpt: [M1_CONCEPT],
+        sourceNote:
+          'El reto final no aparece en el documento curricular: es el componente de gamificación de la misión. Comprueba los aprendizajes de la Sesión 1: los postulados, la teoría celular y el vocabulario científico.'
       },
       assetKeys: [],
       xp: 30

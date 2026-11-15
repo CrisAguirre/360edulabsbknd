@@ -1,4 +1,16 @@
 import type { SeedMission } from './mission-types';
+import {
+  M3_ANSWER,
+  M3_CUBE,
+  M3_FACTORY_ANALOGY,
+  M3_FACTORY_INTRO,
+  M3_QUESTIONS,
+  M3_READING_URL,
+  M3_RESOURCES,
+  M3_SESSION,
+  M3_TABLE,
+  M3_VIDEO_READING
+} from './officialSource';
 
 export const missionM3: SeedMission = {
   code: 'm3',
@@ -20,19 +32,22 @@ export const missionM3: SeedMission = {
     {
       key: 'inicio',
       title: 'Inicio: la fábrica se detiene',
-      description: 'Activa tus ideas sobre la energía y observa cómo trabaja una célula.',
+      description:
+        'Texto oficial de la Sesión 3: preguntas motivadoras, video 360 de la fábrica y video 360 del metabolismo.',
       order: 1
     },
     {
       key: 'desarrollo',
       title: 'Desarrollo: dentro de la fábrica celular',
-      description: 'Explora la célula de la energía, el cubo fábrica y las partículas del metabolismo.',
+      description:
+        'Infografía en Canva y cubo Merge obligatorios. Modelos y animaciones como exploración opcional.',
       order: 2
     },
     {
       key: 'cierre',
       title: 'Cierre: mi bitácora de energía',
-      description: 'Comparte tu infografía, completa la tabla, responde el quiz y recibe la última insignia.',
+      description:
+        'Completa el cuadro de estructuras, comparte tu infografía y recibe la última insignia.',
       order: 3
     }
   ],
@@ -52,11 +67,11 @@ export const missionM3: SeedMission = {
       order: 1,
       title: 'Sesión 3: Procesos metabólicos de la célula',
       instructions:
-        'Lee la orientación pedagógica, explora el funcionamiento de la fábrica celular, completa el cuadro de estructuras y responde las preguntas de indagación en la plataforma Vercel.',
+        'Lee el texto oficial de la Sesión 3, explora el funcionamiento de la fábrica celular y revisa el cuadro de estructuras. El cuadro y las preguntas se responden en la actividad de cierre «Mi bitácora de energía».',
       required: true,
       completionRule: {
         type: 'confirm',
-        label: 'He leído los contenidos, completado el cuadro celular y respondido las preguntas en Vercel'
+        label: 'He leído los contenidos de la Sesión 3 y revisado el cuadro de estructuras'
       },
       content: {
         sessionNumber: 3,
@@ -65,7 +80,7 @@ export const missionM3: SeedMission = {
         subtheme1: 'Subtema 1. Catabolismo',
         subtheme2: 'Subtema 2. Estructura celular',
         activityDescription:
-          'Al inicio la docente, activa los saberes previos de los estudiantes mediante una situación cercana a su realidad, promoviendo la reflexión sobre la importancia de los nutrientes, la energía y las transformaciones que ocurren dentro de las células, como punto de partida para comprender el metabolismo celular, presenta el video 360 de una fábrica de producción, comparando a la célula con una pequeña fábrica que trabaja día y noche. En esta fábrica llegan materiales que son transformados para elaborar productos, se utiliza energía para que las máquinas funcionen y cada trabajador cumple una tarea especial, de manera parecida, las células de nuestro cuerpo reciben nutrientes, los transforman, obtienen energía y producen sustancias necesarias para mantenerse vivas y realizar sus funciones. A todo este conjunto de procesos lo llamamos metabolismo celular”. La docente plantea los siguientes cuestionamientos ¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan? Los estudiantes dan respuesta a pregunta motivadora en la plataforma Vercel La docente presenta el video el video 360 y solicita a los estudiantes visualizarlo y dar respuesta al siguiente cuestionamiento: ¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida? ¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos?, se solicita los estudiantes apoyarse en el contenido del recurso multimedial como también en la lectura “El metabolismo celular: ¿Cómo obtienen y utilizan la energía las células?” para dar respuesta a los cuestionamientos a través de la elaboración de una infografía en la herramienta Canva A partir de la visualización, la docente, presenta y proporciona a los estudiantes un cubo Merge e indica las funcionalidades de la herramienta y propone hacer uso del cubo superponiendo la imagen de la célula vegetal con el propósito de identificar las estructuras celulares para llevar a cabo el metabolismo celular Los estudiantes completan el cuadro de la estructura celular en la plataforma Vercel',
+          'Al inicio la docente, activa los saberes previos de los estudiantes mediante una situación cercana a su realidad, promoviendo la reflexión sobre la importancia de los nutrientes, la energía y las transformaciones que ocurren dentro de las células, como punto de partida para comprender el metabolismo celular, presenta el video 360 de una fábrica de producción, comparando a la célula con una pequeña fábrica que trabaja día y noche.\n\nEn esta fábrica llegan materiales que son transformados para elaborar productos, se utiliza energía para que las máquinas funcionen y cada trabajador cumple una tarea especial, de manera parecida, las células de nuestro cuerpo reciben nutrientes, los transforman, obtienen energía y producen sustancias necesarias para mantenerse vivas y realizar sus funciones. A todo este conjunto de procesos lo llamamos metabolismo celular”.\n\nLa docente plantea los siguientes cuestionamientos\n\n¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan?\n\nLos estudiantes dan respuesta a pregunta motivadora en la plataforma Vercel\n\nLa docente presenta el video el video 360 y solicita a los estudiantes visualizarlo y dar respuesta al siguiente cuestionamiento: ¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida? ¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos?, se solicita los estudiantes apoyarse en el contenido del recurso multimedial como también en la lectura “El metabolismo celular: ¿Cómo obtienen y utilizan la energía las células?” para dar respuesta a los cuestionamientos a través de la elaboración de una infografía en la herramienta Canva\n\nA partir de la visualización, la docente, presenta y proporciona a los estudiantes un cubo Merge e indica las funcionalidades de la herramienta y propone hacer uso del cubo superponiendo la imagen de la célula vegetal con el propósito de identificar las estructuras celulares para llevar a cabo el metabolismo celular\n\nLos estudiantes completan el cuadro de la estructura celular en la plataforma Vercel',
         initialQuestion:
           '¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan?',
         mandatoryQuestion:
@@ -74,8 +89,20 @@ export const missionM3: SeedMission = {
           'https://docs.google.com/document/d/1RNF1OnvpUMINXE-p-D-T9ZF2B6ycDj3x/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
         hasCanva: true,
         hasMergeCube: true,
-        hasEvidenceResponse: true,
+        hasEvidenceResponse: false,
         platformResource: 'Plataforma Vercel',
+        sourceSession: M3_SESSION,
+        sourceSection: 'Descripción de la actividad',
+        sourceExcerpt: [
+          M3_FACTORY_INTRO,
+          M3_FACTORY_ANALOGY,
+          M3_QUESTIONS,
+          M3_ANSWER,
+          M3_VIDEO_READING,
+          M3_CUBE,
+          M3_TABLE
+        ],
+        sourceResources: M3_RESOURCES,
         structuresTable: [
           {
             id: 'membrana',
@@ -193,7 +220,11 @@ export const missionM3: SeedMission = {
         ],
         pauseQuestion:
           '¿Qué pasaría si una fábrica dejara de recibir materiales o energía? ¿Pasaría algo parecido en nuestras células?',
-        transcriptNote: 'Subtítulos y transcripción disponibles.'
+        transcriptNote: 'Subtítulos y transcripción disponibles.',
+        sourceSession: M3_SESSION,
+        sourceSection: 'Recurso obligatorio de la sesión',
+        sourceExcerpt: [M3_FACTORY_INTRO, M3_FACTORY_ANALOGY],
+        sourceResources: [{ label: 'Video 360 de una fábrica de producción' }]
       },
       assetKeys: ['video360_fabrica_celular'],
       xp: 15
@@ -226,7 +257,13 @@ export const missionM3: SeedMission = {
           'La célula necesita agua, nutrientes y un equilibrio interno para funcionar.'
         ],
         pauseQuestion: '¿En qué se parecen y en qué se diferencian la fotosíntesis y la respiración celular?',
-        transcriptNote: 'Puedes leer la transcripción completa desde el botón de accesibilidad.'
+        transcriptNote: 'Puedes leer la transcripción completa desde el botón de accesibilidad.',
+        sourceSession: M3_SESSION,
+        sourceSection: 'Video y lectura del metabolismo',
+        sourceExcerpt: [M3_VIDEO_READING],
+        sourceResources: [
+          { label: 'Lectura: El metabolismo celular (Google Docs)', url: M3_READING_URL }
+        ]
       },
       assetKeys: ['video360_metabolismo'],
       xp: 15
@@ -234,11 +271,11 @@ export const missionM3: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'model3d',
-      order: 1,
+      order: 3,
       title: 'La célula de la energía',
       instructions:
-        'Explora el modelo, mueve los controles de agua, luz y nutrientes y observa qué ocurre con la vacuola y la producción de ATP.',
-      required: true,
+        'Exploración opcional. Explora el modelo, mueve los controles de agua, luz y nutrientes y observa qué ocurre con la vacuola y la producción de ATP.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Experimenté con los controles y observé los estados' },
       content: {
         model: 'energy-cell',
@@ -268,11 +305,11 @@ export const missionM3: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'animation3d',
-      order: 2,
+      order: 4,
       title: 'Plasmólisis, turgencia y producción de ATP',
       instructions:
-        'Observa la secuencia completa: la célula pierde agua, se arruga, vuelve a hidratarse y la mitocondria libera ATP.',
-      required: true,
+        'Exploración opcional. Observa la secuencia completa: la célula pierde agua, se arruga, vuelve a hidratarse y la mitocondria libera ATP.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Vi la secuencia completa' },
       content: {
         title: 'La célula que respira y se hidrata',
@@ -293,7 +330,7 @@ export const missionM3: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'ar_cube',
-      order: 3,
+      order: 2,
       title: 'Cubo fábrica celular',
       instructions:
         'Explora al menos 4 de las 6 caras del Cubo Merge y relaciona cada estructura con su función en la fábrica celular.',
@@ -351,7 +388,11 @@ export const missionM3: SeedMission = {
             description: 'Medio donde ocurren las reacciones celulares.',
             fact: 'Es la planta de producción donde trabajan los organelos.'
           }
-        ]
+        ],
+        sourceSession: M3_SESSION,
+        sourceSection: 'Cubo Merge (obligatorio)',
+        sourceExcerpt: [M3_CUBE],
+        sourceResources: [{ label: 'Aplicación RA de Cubo Merge' }]
       },
       assetKeys: ['cubo_fabrica_celular'],
       xp: 15
@@ -359,11 +400,11 @@ export const missionM3: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'animation2d',
-      order: 4,
+      order: 5,
       title: 'Partículas de ATP, agua y CO2',
       instructions:
-        'Observa las partículas y recorre los pasos del metabolismo. Marca la actividad cuando termines.',
-      required: true,
+        'Exploración opcional. Observa las partículas y recorre los pasos del metabolismo. Marca la actividad cuando termines.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Recorrí los pasos del metabolismo' },
       content: {
         component: 'ParticlesBackground',
@@ -388,7 +429,7 @@ export const missionM3: SeedMission = {
     {
       phase: 'desarrollo',
       type: 'infographic',
-      order: 5,
+      order: 1,
       title: 'Mi infografía en Canva',
       instructions:
         'Crea una infografía en Canva con las dos preguntas guía, tres estructuras celulares y una analogía de fábrica. Guarda el enlace público de solo lectura.',
@@ -416,6 +457,13 @@ export const missionM3: SeedMission = {
           'Expliqué al menos tres estructuras.',
           'Usé una analogía de fábrica.',
           'Mi enlace es público y de solo lectura.'
+        ],
+        sourceSession: M3_SESSION,
+        sourceSection: 'Infografía en Canva (obligatoria)',
+        sourceExcerpt: [M3_VIDEO_READING],
+        sourceResources: [
+          { label: 'Herramienta Canva', url: 'https://www.canva.com' },
+          { label: 'Lectura: El metabolismo celular (Google Docs)', url: M3_READING_URL }
         ]
       },
       assetKeys: ['canva_plantilla_energia'],
@@ -427,12 +475,12 @@ export const missionM3: SeedMission = {
       order: 1,
       title: 'Mi bitácora de energía',
       instructions:
-        'Comparte el enlace de tu infografía de Canva, escribe tu tabla de estructuras y funciones y responde la reflexión final.',
+        'Completa el cuadro de la estructura celular de la Sesión 3, comparte el enlace público de tu infografía de Canva y responde las preguntas de indagación.',
       required: true,
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
-          'Comparte el enlace público de tu infografía de Canva. Luego completa el cuadro con la función principal de cada una de las 6 estructuras celulares y una reflexión sobre por qué la energía es indispensable para la vida.',
+          'Los estudiantes completan el cuadro de la estructura celular en la plataforma Vercel. Completa la función principal de las 6 estructuras y responde: ¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida? ¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos? Acompaña tu respuesta con el enlace público de tu infografía de Canva.',
         requiresLink: true,
         structuresTable: [
           { id: 'membrana', name: 'Membrana celular', placeholder: 'Describe la función principal de la membrana celular...' },
@@ -454,7 +502,11 @@ export const missionM3: SeedMission = {
           { level: 'Básico', description: 'Infografía básica y tres estructuras.' },
           { level: 'Alto', description: 'Infografía clara, tabla completa y explicación del metabolismo.' },
           { level: 'Superior', description: 'Conecta energía, ósmosis y funciones vitales con una analogía propia.' }
-        ]
+        ],
+        sourceSession: M3_SESSION,
+        sourceSection: 'Cuadro de estructura celular (cierre)',
+        sourceExcerpt: [M3_ANSWER, M3_TABLE],
+        sourceResources: [{ label: 'Plataforma Vercel (espacio virtual de la sesión)' }]
       },
       assetKeys: [],
       xp: 20
@@ -471,7 +523,12 @@ export const missionM3: SeedMission = {
       content: {
         questionCount: 8,
         passScore: 70,
-        note: 'Incluye metabolismo, fotosíntesis, respiración celular, ósmosis y turgencia.'
+        note: 'Incluye metabolismo, fotosíntesis, respiración celular, ósmosis y turgencia.',
+        sourceSession: M3_SESSION,
+        sourceSection: 'Cierre de la sesión',
+        sourceExcerpt: [M3_FACTORY_ANALOGY],
+        sourceNote:
+          'El reto final no aparece en el documento curricular: es el componente de gamificación de la misión. Comprueba los aprendizajes de la Sesión 3: metabolismo, fotosíntesis, respiración celular y ósmosis.'
       },
       assetKeys: [],
       xp: 30
@@ -482,7 +539,7 @@ export const missionM3: SeedMission = {
       order: 3,
       title: 'Laboratorio optativo: la papa y la ósmosis',
       instructions:
-        'Reto opcional. Coloca bastones de papa en agua pura, agua con poca sal y agua con mucha sal. Mide y explica qué ocurre.',
+        'Exploración opcional. Coloca bastones de papa en agua pura, agua con poca sal y agua con mucha sal. Mide y explica qué ocurre.',
       required: false,
       completionRule: { type: 'confirm', label: 'Registré mis observaciones del laboratorio' },
       content: {

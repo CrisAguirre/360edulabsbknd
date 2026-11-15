@@ -88,6 +88,9 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
   const completedIds = new Set(
     progress?.activities.filter((activity) => activity.status === 'completed').map((activity) => String(activity.activityId)) ?? []
   );
+  const requiredIds = new Set(
+    activities.filter((activity) => activity.required).map((activity) => String(activity._id))
+  );
   const status = isLocked ? 'locked' : (progress?.status ?? (mission.order === 1 || role !== 'student' ? 'available' : 'locked'));
 
   return {
@@ -101,8 +104,8 @@ export async function getMissionDetail(code: string, studentId: string, role: Us
       currentPhase: progress?.currentPhase ?? 'inicio',
       xpEarned: progress?.xpEarned ?? 0,
       bestQuizPercentage: progress?.bestQuizPercentage ?? 0,
-      completedActivities: completedIds.size,
-      totalActivities: activities.filter((activity) => activity.required).length,
+      completedActivities: [...completedIds].filter((id) => requiredIds.has(id)).length,
+      totalActivities: requiredIds.size,
       startedAt: progress?.startedAt ?? null,
       completedAt: progress?.completedAt ?? null
     } satisfies MissionProgressView
