@@ -47,8 +47,84 @@ export const missionM1: SeedMission = {
   activities: [
     {
       phase: 'inicio',
-      type: 'video360',
+      type: 'reading',
       order: 1,
+      title: 'Sesión 1: ¡Misión microscópica! Acercamiento a la teoría celular',
+      instructions:
+        'Visualiza el recurso multimedial, realiza la lectura oficial y responde a la pregunta de indagación en el espacio virtual de la plataforma.',
+      required: true,
+      completionRule: { type: 'confirm', label: 'He realizado la lectura, visto el video y respondido la pregunta' },
+      content: {
+        sessionNumber: 1,
+        sessionTitle: 'Sesión 1: ¡Misión microscópica! Exploradores en busca de los secretos de la célula',
+        mainTheme: 'Tema principal 1. Acercamiento a la teoría celular',
+        subtheme1: 'Subtema 1. Teoría Celular',
+        subtheme2: 'Subtema 2. La célula como unidad estructural y funcional',
+        activityDescription:
+          'La docente inicia la sesión motivando a los estudiantes a dar respuesta a la pregunta ¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos? Los estudiantes participan de forma oral y escrita en la plataforma, dan a conocer sus aportes y socializan con el grupo sus ideas, la docente, proyecta un recurso multimedial que explica los aportes, sus inicios y representantes en la construcción del conocimiento de lo que actualmente se reconoce como teoría celular, La docente realiza un aporte conceptual explicando que La Teoría celular explica por qué razón la célula es la unidad estructural y funcional de todos los seres vivos que habitan el planeta, excepto los virus que son acelulares. Incluye los siguientes postulados: • Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares). • Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas. • Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas". • La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir. Se solicita los estudiantes visualizar el video y realizar la lectura que se aloja en la plataforma para dar respuesta a la siguiente pregunta en el espacio virtual de la plataforma Vercel.',
+        initialQuestion:
+          '¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos?',
+        mandatoryQuestion:
+          'Identifique dos ideas mencionadas en la lectura que usted considera importantes para el estudio de la biología. Argumente cada una de ellas.',
+        videoTitle: 'Video YouTube: La extraña historia de la teoría celular',
+        videoUrl: 'https://youtu.be/OOXO3fGImoU',
+        videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/OOXO3fGImoU',
+        docUrl:
+          'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
+        platformResource: 'Plataforma Vercel',
+        hasEvidenceResponse: true,
+        postulates: [
+          'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
+          'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
+          'Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas".',
+          'La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir.'
+        ],
+        scientists: [
+          {
+            name: 'Robert Hooke',
+            year: '1665',
+            icon: '🔎',
+            contribution:
+              'Observó una lámina de corcho con un microscopio y vio pequeñas celdas parecidas a las de un panal. Las llamó células, aunque en realidad estaba viendo paredes vacías.'
+          },
+          {
+            name: 'Anton van Leeuwenhoek',
+            year: '1674',
+            icon: '💧',
+            contribution:
+              'Fabricó lentes muy potentes y descubrió microorganismos vivos en el agua. Fue el primero en ver bacterias y protozoos.'
+          },
+          {
+            name: 'Matthias Schleiden y Theodor Schwann',
+            year: '1838-1839',
+            icon: '🌱',
+            contribution:
+              'Después de estudiar muchas plantas y animales, concluyeron que todos los seres vivos están formados por células.'
+          },
+          {
+            name: 'Rudolf Virchow',
+            year: '1855',
+            icon: '🧬',
+            contribution:
+              'Completó la teoría al afirmar que toda célula proviene de otra célula. Las células no aparecen de la nada: se dividen.'
+          }
+        ],
+        glossary: [
+          { term: 'Célula', definition: 'Unidad más pequeña que forma a los seres vivos y realiza sus funciones vitales.' },
+          { term: 'Microscopio', definition: 'Instrumento que usa lentes para ampliar objetos muy pequeños.' },
+          { term: 'Teoría celular', definition: 'Explicación científica que reúne los postulados sobre las células.' },
+          { term: 'Biomoléculas', definition: 'Sustancias químicas indispensables para la vida: agua, minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos.' }
+        ],
+        didYouKnow:
+          'Los virus no son células: necesitan una célula para reproducirse. Por eso la teoría celular explica que la célula es la unidad de todos los seres vivos excepto los virus, que son acelulares.'
+      },
+      assetKeys: ['lectura_teoria_celular'],
+      xp: 20
+    },
+    {
+      phase: 'inicio',
+      type: 'video360',
+      order: 2,
       title: 'Dentro de una gota de agua',
       instructions:
         'Ponte los audífonos, explora la escena 360 y observa con atención. Completa al menos el 80 % del recorrido para continuar.',
@@ -101,73 +177,6 @@ export const missionM1: SeedMission = {
       },
       assetKeys: ['video360_gota_agua'],
       xp: 20
-    },
-    {
-      phase: 'inicio',
-      type: 'reading',
-      order: 2,
-      title: 'La extraña historia de la teoría celular',
-      instructions:
-        'Lee la historia de Cito y elige dos ideas que te parezcan importantes. Las usarás en tu evidencia final.',
-      required: true,
-      completionRule: { type: 'confirm', label: 'Ya leí la historia y elegí dos ideas' },
-      content: {
-        title: 'La extraña historia de la teoría celular',
-        intro:
-          'Durante siglos, los seres vivos fueron un misterio. Nadie sabía de qué estaban hechos ni por qué crecían. Todo cambió cuando varias personas se atrevieron a mirar más allá de lo que el ojo podía ver.',
-        videoTitle: 'La extraña historia de la teoría celular',
-        videoUrl: 'https://youtu.be/OOXO3fGImoU',
-        videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/OOXO3fGImoU',
-        docUrl:
-          'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
-        mandatoryQuestion:
-          'Identifique dos ideas mencionadas en la lectura que usted considera importantes para el estudio de la biología. Argumente cada una de ellas.',
-        scientists: [
-          {
-            name: 'Robert Hooke',
-            year: '1665',
-            icon: '🔎',
-            contribution:
-              'Observó una lámina de corcho con un microscopio y vio pequeñas celdas parecidas a las de un panal. Las llamó células, aunque en realidad estaba viendo paredes vacías.'
-          },
-          {
-            name: 'Anton van Leeuwenhoek',
-            year: '1674',
-            icon: '💧',
-            contribution:
-              'Fabricó lentes muy potentes y descubrió microorganismos vivos en el agua. Fue el primero en ver bacterias y protozoos.'
-          },
-          {
-            name: 'Matthias Schleiden y Theodor Schwann',
-            year: '1838-1839',
-            icon: '🌱',
-            contribution:
-              'Después de estudiar muchas plantas y animales, concluyeron que todos los seres vivos están formados por células.'
-          },
-          {
-            name: 'Rudolf Virchow',
-            year: '1855',
-            icon: '🧬',
-            contribution:
-              'Completó la teoría al afirmar que toda célula proviene de otra célula. Las células no aparecen de la nada: se dividen.'
-          }
-        ],
-        postulates: [
-          'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
-          'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
-          'Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas".',
-          'La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir.'
-        ],
-        glossary: [
-          { term: 'Célula', definition: 'Unidad más pequeña que forma a los seres vivos y realiza sus funciones vitales.' },
-          { term: 'Microscopio', definition: 'Instrumento que usa lentes para ampliar objetos muy pequeños.' },
-          { term: 'Teoría celular', definition: 'Explicación científica que reúne los postulados sobre las células.' }
-        ],
-        didYouKnow:
-          'Los virus no son células: necesitan una célula para reproducirse. Por eso la teoría celular no los incluye como seres celulares.'
-      },
-      assetKeys: ['lectura_teoria_celular'],
-      xp: 10
     },
     {
       phase: 'desarrollo',

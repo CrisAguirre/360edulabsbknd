@@ -22,9 +22,9 @@ export async function createOrUpdateEvidence(studentId: string, input: EvidenceI
   const activity = await Activity.findOne({
     _id: input.activityId,
     missionId: mission._id,
-    type: 'evidence'
+    $or: [{ type: 'evidence' }, { 'content.hasEvidenceResponse': true }, { type: 'reading' }]
   });
-  if (!activity) throw notFound('Actividad de evidencia no encontrada');
+  if (!activity) throw notFound('Actividad no encontrada');
 
   const text = (input.text ?? '').trim();
   const linkUrl = (input.linkUrl ?? '').trim();
