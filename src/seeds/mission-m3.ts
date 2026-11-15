@@ -48,85 +48,67 @@ export const missionM3: SeedMission = {
   activities: [
     {
       phase: 'inicio',
-      type: 'video360',
-      order: 1,
-      title: 'Fábrica de producción',
-      instructions:
-        'Entra a la célula-fábrica y observa qué ocurre cuando faltan materiales o energía. Completa al menos el 80 % del recorrido.',
-      required: true,
-      completionRule: { type: 'video_progress', min: 80 },
-      content: {
-        durationSeconds: 30,
-        sceneTitle: 'Fábrica de producción',
-        place: 'El interior de una célula vegetal, imaginado como una fábrica',
-        intro:
-          'Cito te muestra una fábrica muy especial: no tiene chimeneas, pero sí puertas, generadores, paneles solares y un tanque de agua. Es la célula.',
-        narration: [
-          'Cito: imagina una fábrica que debe recibir materiales, producir energía y sacar desechos. La célula hace algo muy parecido.',
-          'La membrana es la puerta: decide qué entra y qué sale. El núcleo es la oficina de gerencia: dirige las actividades.',
-          'Las mitocondrias son los generadores. Los cloroplastos, los paneles solares. La vacuola, el tanque de agua.',
-          'Si la fábrica deja de recibir energía o materiales, las máquinas se detienen. En la célula, eso también afecta la vida.'
-        ],
-        factoryMap: [
-          { id: 'membrana', structure: 'Membrana', analog: 'Puerta de entrada y salida', icon: '🚪' },
-          { id: 'citoplasma', structure: 'Citoplasma', analog: 'Planta de producción', icon: '🏭' },
-          { id: 'nucleo', structure: 'Núcleo', analog: 'Oficina de gerencia', icon: '🗂️' },
-          { id: 'mitocondria', structure: 'Mitocondria', analog: 'Generador de energía', icon: '⚡' },
-          { id: 'cloroplasto', structure: 'Cloroplasto', analog: 'Panel solar', icon: '🌞' },
-          { id: 'vacuola', structure: 'Vacuola', analog: 'Tanque de agua', icon: '🛢️' }
-        ],
-        pauseQuestion: '¿Qué pasaría si una fábrica dejara de recibir materiales o energía? ¿Pasaría algo parecido en nuestras células?',
-        transcriptNote: 'Subtítulos y transcripción disponibles.'
-      },
-      assetKeys: ['video360_fabrica_celular'],
-      xp: 15
-    },
-    {
-      phase: 'inicio',
-      type: 'video360',
-      order: 2,
-      title: 'Metabolismo celular',
-      instructions:
-        'Observa la escena 360 y registra dos ideas sobre cómo la célula obtiene y usa la energía. Completa al menos el 80 % del recorrido.',
-      required: true,
-      completionRule: { type: 'video_progress', min: 80 },
-      content: {
-        durationSeconds: 30,
-        sceneTitle: 'Metabolismo celular',
-        place: 'Un viaje por el interior de una célula que trabaja sin descanso',
-        intro:
-          'Mientras lees esto, tus células están trabajando. Rompen nutrientes, producen ATP y construyen nuevas moléculas. Ese conjunto de reacciones es el metabolismo.',
-        narration: [
-          'Cito: metabolismo no significa solo comer o respirar. Es el conjunto de reacciones que obtienen y usan energía.',
-          'En la respiración celular, la mitocondria usa oxígeno y nutrientes para producir ATP.',
-          'En la fotosíntesis, el cloroplasto usa luz, agua y CO2 para producir glucosa y oxígeno.',
-          'Las plantas hacen las dos cosas: fotosíntesis y respiración celular. Los animales solo hacen respiración celular.'
-        ],
-        keyIdeas: [
-          'El metabolismo es el conjunto de reacciones para obtener y usar energía.',
-          'La mitocondria produce ATP mediante la respiración celular.',
-          'El cloroplasto capta luz y produce glucosa mediante la fotosíntesis.',
-          'La célula necesita agua, nutrientes y un equilibrio interno para funcionar.'
-        ],
-        pauseQuestion: '¿En qué se parecen y en qué se diferencian la fotosíntesis y la respiración celular?',
-        transcriptNote: 'Puedes leer la transcripción completa desde el botón de accesibilidad.'
-      },
-      assetKeys: ['video360_metabolismo'],
-      xp: 10
-    },
-    {
-      phase: 'inicio',
       type: 'reading',
-      order: 3,
-      title: 'El metabolismo celular',
+      order: 1,
+      title: 'Sesión 3: Procesos metabólicos de la célula',
       instructions:
-        'Lee la explicación, compara fotosíntesis y respiración celular, y elige dos ideas para tu bitácora final.',
+        'Lee la orientación pedagógica, explora el funcionamiento de la fábrica celular, completa el cuadro de estructuras y responde las preguntas de indagación en la plataforma Vercel.',
       required: true,
-      completionRule: { type: 'confirm', label: 'Ya leí y comprendí el metabolismo' },
+      completionRule: {
+        type: 'confirm',
+        label: 'He leído los contenidos, completado el cuadro celular y respondido las preguntas en Vercel'
+      },
       content: {
-        title: '¿Cómo obtienen y utilizan la energía las células?',
+        sessionNumber: 3,
+        sessionTitle: 'Sesión 3: Procesos metabólicos de la célula',
+        mainTheme: 'Tema principal 1. Concepto de Célula',
+        subtheme1: 'Subtema 1. Catabolismo',
+        subtheme2: 'Subtema 2. Estructura celular',
+        activityDescription:
+          'Al inicio la docente, activa los saberes previos de los estudiantes mediante una situación cercana a su realidad, promoviendo la reflexión sobre la importancia de los nutrientes, la energía y las transformaciones que ocurren dentro de las células, como punto de partida para comprender el metabolismo celular, presenta el video 360 de una fábrica de producción, comparando a la célula con una pequeña fábrica que trabaja día y noche. En esta fábrica llegan materiales que son transformados para elaborar productos, se utiliza energía para que las máquinas funcionen y cada trabajador cumple una tarea especial, de manera parecida, las células de nuestro cuerpo reciben nutrientes, los transforman, obtienen energía y producen sustancias necesarias para mantenerse vivas y realizar sus funciones. A todo este conjunto de procesos lo llamamos metabolismo celular”. La docente plantea los siguientes cuestionamientos ¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan? Los estudiantes dan respuesta a pregunta motivadora en la plataforma Vercel La docente presenta el video el video 360 y solicita a los estudiantes visualizarlo y dar respuesta al siguiente cuestionamiento: ¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida? ¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos?, se solicita los estudiantes apoyarse en el contenido del recurso multimedial como también en la lectura “El metabolismo celular: ¿Cómo obtienen y utilizan la energía las células?” para dar respuesta a los cuestionamientos a través de la elaboración de una infografía en la herramienta Canva A partir de la visualización, la docente, presenta y proporciona a los estudiantes un cubo Merge e indica las funcionalidades de la herramienta y propone hacer uso del cubo superponiendo la imagen de la célula vegetal con el propósito de identificar las estructuras celulares para llevar a cabo el metabolismo celular Los estudiantes completan el cuadro de la estructura celular en la plataforma Vercel',
+        initialQuestion:
+          '¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan?',
+        mandatoryQuestion:
+          '¿De qué manera las células vegetales y animales llevan a cabo sus actividades para conservar la vida? ¿Cómo se llama el proceso mediante el cual las células adquieren energía y eliminan desechos?',
         docUrl:
           'https://docs.google.com/document/d/1RNF1OnvpUMINXE-p-D-T9ZF2B6ycDj3x/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
+        hasCanva: true,
+        hasMergeCube: true,
+        hasEvidenceResponse: true,
+        platformResource: 'Plataforma Vercel',
+        structuresTable: [
+          {
+            id: 'membrana',
+            name: 'Membrana celular',
+            placeholder: 'Función: controla la entrada de nutrientes y salida de desechos...'
+          },
+          {
+            id: 'cloroplastos',
+            name: 'Cloroplastos',
+            placeholder: 'Función: captan la luz y producen glucosa en la fotosíntesis...'
+          },
+          {
+            id: 'mitocondrias',
+            name: 'Mitocondrias',
+            placeholder: 'Función: transforman nutrientes en energía ATP (respiración celular)...'
+          },
+          {
+            id: 'citoplasma',
+            name: 'Citoplasma',
+            placeholder: 'Función: medio gelatinoso donde ocurren las reacciones metabólicas...'
+          },
+          {
+            id: 'vacuola',
+            name: 'Vacuola central',
+            placeholder: 'Función: almacena agua y sustancias, manteniendo la turgencia...'
+          },
+          {
+            id: 'nucleo',
+            name: 'Núcleo',
+            placeholder: 'Función: dirige y coordina todas las actividades de la célula...'
+          }
+        ],
+        title: '¿Cómo obtienen y utilizan la energía las células?',
         intro:
           'Las células necesitan energía para crecer, repararse, mover sustancias y reproducirse. Esa energía se obtiene de los nutrientes y se transforma en una molécula llamada ATP, que funciona como una pequeña batería de uso inmediato.',
         sections: [
@@ -152,8 +134,20 @@ export const missionM3: SeedMission = {
           }
         ],
         comparison: [
-          { process: 'Fotosíntesis', where: 'Cloroplasto', needs: 'Luz, agua y CO2', produces: 'Glucosa y oxígeno', who: 'Plantas, algas y algunas bacterias' },
-          { process: 'Respiración celular', where: 'Mitocondria', needs: 'Nutrientes y oxígeno', produces: 'ATP, agua y CO2', who: 'Plantas y animales' }
+          {
+            process: 'Fotosíntesis',
+            where: 'Cloroplasto',
+            needs: 'Luz, agua y CO2',
+            produces: 'Glucosa y oxígeno',
+            who: 'Plantas, algas y algunas bacterias'
+          },
+          {
+            process: 'Respiración celular',
+            where: 'Mitocondria',
+            needs: 'Nutrientes y oxígeno',
+            produces: 'ATP, agua y CO2',
+            who: 'Plantas y animales'
+          }
         ],
         glossary: [
           { term: 'ATP', definition: 'Molécula que almacena y libera energía para las actividades celulares.' },
@@ -166,7 +160,76 @@ export const missionM3: SeedMission = {
           'La célula no respira como nosotros: realiza respiración celular, un proceso químico que ocurre en las mitocondrias.'
       },
       assetKeys: ['lectura_metabolismo'],
-      xp: 10
+      xp: 20
+    },
+    {
+      phase: 'inicio',
+      type: 'video360',
+      order: 2,
+      title: 'video 360 de una fábrica de producción',
+      instructions:
+        'Entra a la célula-fábrica y observa qué ocurre cuando faltan materiales o energía. Completa al menos el 80 % del recorrido.',
+      required: true,
+      completionRule: { type: 'video_progress', min: 80 },
+      content: {
+        durationSeconds: 30,
+        sceneTitle: 'video 360 de una fábrica de producción',
+        place: 'El interior de una célula vegetal, imaginado como una fábrica',
+        intro:
+          'Cito te muestra una fábrica muy especial: no tiene chimeneas, pero sí puertas, generadores, paneles solares y un tanque de agua. Es la célula.',
+        narration: [
+          'Cito: imagina una fábrica que debe recibir materiales, producir energía y sacar desechos. La célula hace algo muy parecido.',
+          'La membrana es la puerta: decide qué entra y qué sale. El núcleo es la oficina de gerencia: dirige las actividades.',
+          'Las mitocondrias son los generadores. Los cloroplastos, los paneles solares. La vacuola, el tanque de agua.',
+          'Si la fábrica deja de recibir energía o materiales, las máquinas se detienen. En la célula, eso también afecta la vida.'
+        ],
+        factoryMap: [
+          { id: 'membrana', structure: 'Membrana', analog: 'Puerta de entrada y salida', icon: '🚪' },
+          { id: 'citoplasma', structure: 'Citoplasma', analog: 'Planta de producción', icon: '🏭' },
+          { id: 'nucleo', structure: 'Núcleo', analog: 'Oficina de gerencia', icon: '🗂️' },
+          { id: 'mitocondria', structure: 'Mitocondria', analog: 'Generador de energía', icon: '⚡' },
+          { id: 'cloroplasto', structure: 'Cloroplasto', analog: 'Panel solar', icon: '🌞' },
+          { id: 'vacuola', structure: 'Vacuola', analog: 'Tanque de agua', icon: '🛢️' }
+        ],
+        pauseQuestion:
+          '¿Qué pasaría si una fábrica dejara de recibir materiales o energía? ¿Pasaría algo parecido en nuestras células?',
+        transcriptNote: 'Subtítulos y transcripción disponibles.'
+      },
+      assetKeys: ['video360_fabrica_celular'],
+      xp: 15
+    },
+    {
+      phase: 'inicio',
+      type: 'video360',
+      order: 3,
+      title: 'Video 360 Metabolismo celular',
+      instructions:
+        'Observa la escena 360 y registra dos ideas sobre cómo la célula obtiene y usa la energía. Completa al menos el 80 % del recorrido.',
+      required: true,
+      completionRule: { type: 'video_progress', min: 80 },
+      content: {
+        durationSeconds: 30,
+        sceneTitle: 'Video 360 Metabolismo celular',
+        place: 'Un viaje por el interior de una célula que trabaja sin descanso',
+        intro:
+          'Mientras lees esto, tus células están trabajando. Rompen nutrientes, producen ATP y construyen nuevas moléculas. Ese conjunto de reacciones es el metabolismo.',
+        narration: [
+          'Cito: metabolismo no significa solo comer o respirar. Es el conjunto de reacciones que obtienen y usan energía.',
+          'En la respiración celular, la mitocondria usa oxígeno y nutrientes para producir ATP.',
+          'En la fotosíntesis, el cloroplasto usa luz, agua y CO2 para producir glucosa y oxígeno.',
+          'Las plantas hacen las dos cosas: fotosíntesis y respiración celular. Los animales solo hacen respiración celular.'
+        ],
+        keyIdeas: [
+          'El metabolismo es el conjunto de reacciones para obtener y usar energía.',
+          'La mitocondria produce ATP mediante la respiración celular.',
+          'El cloroplasto capta luz y produce glucosa mediante la fotosíntesis.',
+          'La célula necesita agua, nutrientes y un equilibrio interno para funcionar.'
+        ],
+        pauseQuestion: '¿En qué se parecen y en qué se diferencian la fotosíntesis y la respiración celular?',
+        transcriptNote: 'Puedes leer la transcripción completa desde el botón de accesibilidad.'
+      },
+      assetKeys: ['video360_metabolismo'],
+      xp: 15
     },
     {
       phase: 'desarrollo',

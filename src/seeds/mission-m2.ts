@@ -48,50 +48,35 @@ export const missionM2: SeedMission = {
   activities: [
     {
       phase: 'inicio',
-      type: 'video360',
-      order: 1,
-      title: 'La célula y sus partes',
-      instructions:
-        'Explora la escena 360 y marca tres diferencias entre la célula animal y la vegetal. Completa al menos el 80 % del recorrido.',
-      required: true,
-      completionRule: { type: 'video_progress', min: 80 },
-      content: {
-        durationSeconds: 30,
-        sceneTitle: 'La célula y sus partes',
-        place: 'Un viaje desde una hoja hasta una célula vegetal, y desde tu piel hasta una célula animal',
-        intro:
-          'Cito abre la muestra y aparecen dos células. Una tiene una pared rígida y pequeños paneles verdes. La otra es más flexible. ¿Qué más puedes observar?',
-        narration: [
-          'Cito: esta es una célula vegetal. Mira su forma: parece una caja porque tiene pared celular.',
-          'Ahora observa la célula animal. Su membrana es flexible y su forma cambia con facilidad.',
-          'Las dos tienen membrana, citoplasma, núcleo y mitocondrias. ¿Qué estructuras solo ves en la vegetal?',
-          'Los cloroplastos son verdes porque captan la luz. La vacuola central guarda agua y mantiene la célula firme.'
-        ],
-        structures: [
-          { id: 'membrana', name: 'Membrana', icon: '🛡️', fact: 'Controla qué entra y qué sale.' },
-          { id: 'nucleo', name: 'Núcleo', icon: '🧠', fact: 'Guarda la información y dirige las actividades.' },
-          { id: 'citoplasma', name: 'Citoplasma', icon: '💧', fact: 'Medio gelatinoso donde ocurren las reacciones.' },
-          { id: 'mitocondria', name: 'Mitocondrias', icon: '⚡', fact: 'Producen la energía utilizable o ATP.' },
-          { id: 'vacuola', name: 'Vacuola', icon: '🫧', fact: 'Almacena agua y sustancias.' },
-          { id: 'pared', name: 'Pared celular', icon: '🧱', fact: 'Da forma y protección a la célula vegetal.' },
-          { id: 'cloroplasto', name: 'Cloroplastos', icon: '🌿', fact: 'Captan luz para hacer fotosíntesis.' }
-        ],
-        pauseQuestion: '¿Qué estructuras crees que solo tiene la célula vegetal?',
-        transcriptNote: 'Puedes activar la transcripción y los subtítulos desde el reproductor.'
-      },
-      assetKeys: ['video360_celula_partes'],
-      xp: 20
-    },
-    {
-      phase: 'inicio',
       type: 'reading',
-      order: 2,
-      title: 'Animal o vegetal: dos formas de ser célula',
+      order: 1,
+      title: 'Sesión 2: Construyendo el concepto de célula',
       instructions:
-        'Lee la comparación y observa la tabla. Al finalizar, podrás explicar al menos cuatro diferencias entre ambos tipos de célula.',
+        'Visualiza el recurso multimedial, explora las semejanzas y diferencias entre célula animal y vegetal, descarga las plantillas Quiver y responde la pregunta en la plataforma Vercel.',
       required: true,
-      completionRule: { type: 'confirm', label: 'Ya leí la comparación' },
+      completionRule: {
+        type: 'confirm',
+        label: 'He explorado los conceptos, descargado las plantillas Quiver y respondido el planteamiento en Vercel'
+      },
       content: {
+        sessionNumber: 2,
+        sessionTitle: 'Sesión 2: Construyendo el concepto de célula',
+        mainTheme: 'Tema principal 1. Concepto de Célula',
+        subtheme1: 'Subtema 1. Partes o componentes de la célula',
+        subtheme2: 'Subtema 2. Funciones de los componentes de la célula',
+        activityDescription:
+          'A partir de la identificación de la célula como unidad estructural y funcional de los seres vivos, la docente, busca reconocer los saberes previos de los estudiantes de grado 5.º sobre la clasificación de las células, especialmente las animales y vegetales, así como identificar sus conocimientos acerca de las principales estructuras celulares y sus funciones, promoviendo la curiosidad, la participación y la construcción colectiva del conocimiento, planteando la pregunta ¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar? Para dar respuesta al planteamiento, la docente invita a los estudiantes a visualizar el video 360 de la célula y sus partes Los estudiantes dan respuesta al planteamiento en la plataforma Vercel A fin de afianzar el concepto de la célula y sus partes, la docente proporciona material impreso de Quiver y solicita a los estudiantes colorear la estructura de la célula vegetal y animal, posterior a ello, cada grupo de estudiantes proyecta la imagen a través de la aplicación de Quiver e identifican las semejanzas y diferencias de la estructura entre la célula animal y vegetal',
+        initialQuestion:
+          '¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar?',
+        mandatoryQuestion:
+          '¿Creen que las células de nuestro cuerpo son iguales a las de una planta? ¿Qué diferencias imaginan que existen entre ellas y qué partes creen que necesitan para poder vivir y funcionar?',
+        plantTemplateDriveUrl:
+          'https://drive.google.com/file/d/1Rc_5xG1CsOAcfSwXpzT3dA5aBwOfNMMa/view?usp=sharing',
+        animalTemplateDriveUrl:
+          'https://drive.google.com/file/d/1euCki6yPm4LXeIMCyWAKvnBfRPPVmJmu/view?usp=sharing',
+        hasQuiver: true,
+        hasEvidenceResponse: true,
+        platformResource: 'Plataforma Vercel',
         title: 'Animal o vegetal: dos formas de ser célula',
         intro:
           'Las células animales y vegetales comparten muchas estructuras, pero también tienen diferencias que les permiten vivir de formas distintas. Ninguna es mejor: cada una está adaptada a su manera de obtener alimento y relacionarse con el ambiente.',
@@ -130,7 +115,43 @@ export const missionM2: SeedMission = {
           'Evitamos decir que la célula animal "no tiene vacuolas": tiene vacuolas pequeñas o temporales. La diferencia está en su tamaño y función.'
       },
       assetKeys: ['lectura_comparacion_celular'],
-      xp: 10
+      xp: 20
+    },
+    {
+      phase: 'inicio',
+      type: 'video360',
+      order: 2,
+      title: 'Video 360 de la célula y sus partes',
+      instructions:
+        'Explora la escena 360 y marca tres diferencias entre la célula animal y la vegetal. Completa al menos el 80 % del recorrido.',
+      required: true,
+      completionRule: { type: 'video_progress', min: 80 },
+      content: {
+        durationSeconds: 30,
+        sceneTitle: 'Video 360 de la célula y sus partes',
+        place: 'Un viaje desde una hoja hasta una célula vegetal, y desde tu piel hasta una célula animal',
+        intro:
+          'Cito abre la muestra y aparecen dos células. Una tiene una pared rígida y pequeños paneles verdes. La otra es más flexible. ¿Qué más puedes observar?',
+        narration: [
+          'Cito: esta es una célula vegetal. Mira su forma: parece una caja porque tiene pared celular.',
+          'Ahora observa la célula animal. Su membrana es flexible y su forma cambia con facilidad.',
+          'Las dos tienen membrana, citoplasma, núcleo y mitocondrias. ¿Qué estructuras solo ves en la vegetal?',
+          'Los cloroplastos son verdes porque captan la luz. La vacuola central guarda agua y mantiene la célula firme.'
+        ],
+        structures: [
+          { id: 'membrana', name: 'Membrana', icon: '🛡️', fact: 'Controla qué entra y qué sale.' },
+          { id: 'nucleo', name: 'Núcleo', icon: '🧠', fact: 'Guarda la información y dirige las actividades.' },
+          { id: 'citoplasma', name: 'Citoplasma', icon: '💧', fact: 'Medio gelatinoso donde ocurren las reacciones.' },
+          { id: 'mitocondria', name: 'Mitocondrias', icon: '⚡', fact: 'Producen la energía utilizable o ATP.' },
+          { id: 'vacuola', name: 'Vacuola', icon: '🫧', fact: 'Almacena agua y sustancias.' },
+          { id: 'pared', name: 'Pared celular', icon: '🧱', fact: 'Da forma y protección a la célula vegetal.' },
+          { id: 'cloroplasto', name: 'Cloroplastos', icon: '🌿', fact: 'Captan luz para hacer fotosíntesis.' }
+        ],
+        pauseQuestion: '¿Qué estructuras crees que solo tiene la célula vegetal?',
+        transcriptNote: 'Puedes activar la transcripción y los subtítulos desde el reproductor.'
+      },
+      assetKeys: ['video360_celula_partes'],
+      xp: 20
     },
     {
       phase: 'desarrollo',
