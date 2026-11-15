@@ -213,7 +213,7 @@ export const progressScenarios: ProgressScenario[] = [
         teacherScore: 'superior',
         feedback:
           'Tu infografía integra energía, ósmosis y funciones vitales con una analogía propia muy potente. Es un excelente cierre de la ruta.',
-        linkUrl: 'https://www.canva.com/design/citoindagar-demo/view',
+        linkUrl: 'https://www.canva.com/design/360-demo/view',
         text: 'Mi infografía explica la célula como una fábrica: la membrana es la puerta, el núcleo la oficina de gerencia, las mitocondrias los generadores y los cloroplastos los paneles solares. La vacuola es el tanque de agua. Si la célula pierde agua, entra en plasmólisis; en agua dulce recupera la turgencia. Los nutrientes se transforman en ATP para mantener la vida.'
       }
     ]

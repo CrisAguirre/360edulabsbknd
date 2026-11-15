@@ -17,9 +17,9 @@ export async function connectDatabase(): Promise<void> {
   }
 
   memoryServer = await MongoMemoryServer.create({
-    instance: { dbName: 'citoindagar360' }
+    instance: { dbName: 'laboratorio360' }
   });
-  await mongoose.connect(memoryServer.getUri(), { dbName: 'citoindagar360' });
+  await mongoose.connect(memoryServer.getUri(), { dbName: 'laboratorio360' });
   logger.warn('MongoDB en memoria activo (solo desarrollo). Los datos se pierden al reiniciar.');
 }
 

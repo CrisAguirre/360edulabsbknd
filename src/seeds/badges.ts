@@ -40,7 +40,7 @@ export const badgeSeed: BadgeSeed[] = [
     missionCode: 'm3'
   },
   {
-    code: 'cientifico-citoindagar',
+    code: 'cientifico-360',
     name: 'Científico Laboratorio 360',
     description:
       'Obtuviste las tres insignias de la ruta y presentaste tu bitácora como un verdadero científico del Laboratorio.',

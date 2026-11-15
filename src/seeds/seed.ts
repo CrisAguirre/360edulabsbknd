@@ -334,7 +334,7 @@ export async function seedDatabase(): Promise<SeedSummary> {
     }
   }
 
-  const finalBadge = badgeByCode.get('cientifico-citoindagar');
+  const finalBadge = badgeByCode.get('cientifico-360');
   if (finalBadge) {
     for (const scenario of progressScenarios) {
       if (scenario.completedMissions.length < 3) continue;

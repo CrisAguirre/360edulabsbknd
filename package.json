@@ -2,7 +2,7 @@
   "name": "360edulabsbknd",
   "version": "0.1.0",
   "private": true,
-  "description": "API de CitoIndagar 360 - plataforma educativa sobre la célula",
+  "description": "API de Laboratorio 360 - plataforma educativa sobre la célula",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",

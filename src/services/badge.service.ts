@@ -6,7 +6,7 @@ import { StudentBadge } from '../models/StudentBadge';
 import { notFound, ruleViolation } from '../utils/AppError';
 
 const MAIN_MISSION_BADGES = ['explorador-celular', 'constructor-conocimiento', 'guardian-energia'];
-const FINAL_BADGE_CODE = 'cientifico-citoindagar';
+const FINAL_BADGE_CODE = 'cientifico-360';
 
 export async function awardBadge(
   studentId: string,

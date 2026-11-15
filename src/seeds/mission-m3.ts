@@ -410,7 +410,7 @@ export const missionM3: SeedMission = {
           'Una analogía de la fábrica.',
           'Una conclusión sobre la importancia de la energía para la vida.'
         ],
-        templateUrl: 'https://www.canva.com/design/citoindagar-plantilla/view',
+        templateUrl: 'https://www.canva.com/design/360-plantilla/view',
         checklist: [
           'Incluí las dos preguntas guía.',
           'Expliqué al menos tres estructuras.',
