@@ -85,7 +85,7 @@ export const missionM1: SeedMission = {
         docUrl:
           'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
         platformResource: 'Plataforma Vercel',
-        hasEvidenceResponse: false,
+        hasEvidenceResponse: true,
         sourceSession: M1_SESSION,
         sourceSection: 'Descripción de la actividad',
         sourceExcerpt: [
@@ -97,6 +97,56 @@ export const missionM1: SeedMission = {
           M1_QUESTION
         ],
         sourceResources: M1_RESOURCES,
+        subactivities: {
+          s11: {
+            code: '1.1',
+            title: 'Aportes y socialización',
+            description: M1_OPENING,
+            participationText: M1_PARTICIPATION,
+            initialQuestion:
+              '¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿se imaginan cómo son y qué hacen para mantenernos vivos?'
+          },
+          s12: {
+            code: '1.2',
+            title: 'Aporte conceptual',
+            description: M1_CONCEPT,
+            postulates: [
+              'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
+              'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
+              'Toda célula se compone básicamente de las mismas sustancias químicas: agua, trazas de minerales, carbohidratos, lípidos, proteínas y ácidos nucleicos, conocidas como "moléculas de la vida o biomoléculas".',
+              'La célula es la unidad funcional de los seres vivos, porque independientemente del organismo al cual se haga referencia, es en ella donde ocurre las reacciones químicas que se necesitan para vivir.'
+            ]
+          },
+          s13: {
+            code: '1.3',
+            title: 'Visualización del video multimedial',
+            videoTitle: 'Video YouTube: La extraña historia de la teoría celular',
+            videoUrl: 'https://youtu.be/OOXO3fGImoU',
+            videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/OOXO3fGImoU',
+            description:
+              'Recurso multimedial animado que explica los aportes, sus inicios y representantes en la construcción del conocimiento de lo que actualmente se reconoce como teoría celular.',
+            purpose: [
+              'Comprender cómo la invención de los primeros microscopios permitió observar un universo invisible para los seres humanos.',
+              'Descubrir la razón por la cual Robert Hooke bautizó como "células" a las cavidades observadas en el corcho.',
+              'Conocer los "animálculos" vivos descubiertos por Anton van Leeuwenhoek en el agua y el sarro dental.',
+              'Identificar cómo la colaboración y el debate científico entre Schleiden, Schwann y Virchow consolidaron los postulados universales de la vida.'
+            ]
+          },
+          s14: {
+            code: '1.4',
+            title: 'Lectura oficial adaptada y Espacio Virtual de Vercel',
+            docUrl:
+              'https://docs.google.com/document/d/1sP7mzPT9L0z-RH3FDHUBztziEnZ56rqG/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
+            mandatoryQuestion:
+              'Identifique dos ideas mencionadas en la lectura que usted considera importantes para el estudio de la biología. Argumente cada una de ellas.'
+          },
+          s15: {
+            code: '1.5',
+            title: 'Contenidos extras de apoyo (Opcionales para el estudiante)',
+            description:
+              'Contenidos interactivos adicionales que no se encuentran en 1.1, 1.2, 1.3 ni 1.4, disponibles para enriquecer la experiencia científica del estudiante de manera opcional sin bloquear su avance curricular.'
+          }
+        },
         postulates: [
           'Todos los seres vivos que habitan el planeta se componen de una (unicelulares) o más células (pluricelulares).',
           'Toda célula procede de otra preexistente, que ha copiado su información genética antes de dividirse en dos células hijas.',
