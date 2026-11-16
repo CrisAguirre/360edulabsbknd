@@ -13,8 +13,8 @@ import {
 export const missionM1: SeedMission = {
   code: 'm1',
   order: 1,
-  title: '¡Misión microscópica!',
-  subtitle: 'Exploradores en busca de los secretos de la célula',
+  title: 'La extraña historia de la teoría celular',
+  subtitle: 'Acercamiento a la teoría celular · Unidad estructural y funcional',
   bigQuestion:
     '¿Sabías que tu cuerpo, las plantas y los animales están formados por millones de pequeñas estructuras que no podemos ver a simple vista? ¿Se imaginan cómo son y qué hacen para mantenernos vivos?',
   description:
