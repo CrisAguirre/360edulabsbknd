@@ -441,8 +441,8 @@ export const missionM1: SeedMission = {
       order: 1,
       title: 'Dos ideas que cambian la mirada',
       instructions:
-        'Responde la pregunta de indagación de la Sesión 1: identifica dos ideas de la lectura y argumenta cada una con tus propias palabras. Puedes guardar un borrador antes de enviar.',
-      required: true,
+        'Exploración opcional. Cuaderno de bitácora adicional para registrar tus argumentos. (La entrega formal calificada de la Sesión 1 se realiza en la sub-actividad 1.4 de la plataforma).',
+      required: false,
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
