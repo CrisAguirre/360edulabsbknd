@@ -15,6 +15,7 @@ export interface SafeUser {
   displayName: string;
   role: UserRole;
   avatarKey: string;
+  createdAt?: Date;
 }
 
 export interface SessionMeta {
@@ -49,7 +50,8 @@ export function toSafeUser(user: UserDoc): SafeUser {
     username: user.username,
     displayName: user.displayName,
     role: user.role,
-    avatarKey: user.avatarKey
+    avatarKey: user.avatarKey,
+    createdAt: user.createdAt
   };
 }
 

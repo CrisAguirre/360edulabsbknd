@@ -6,7 +6,8 @@ import {
   loginController,
   logoutController,
   meController,
-  refreshController
+  refreshController,
+  updateProfileController
 } from '../controllers/auth.controller';
 
 export const authRouter = Router();
@@ -15,4 +16,5 @@ authRouter.post('/login', asyncHandler(loginController));
 authRouter.post('/refresh', asyncHandler(refreshController));
 authRouter.post('/logout', asyncHandler(logoutController));
 authRouter.get('/me', authenticate, asyncHandler(meController));
+authRouter.patch('/me', authenticate, asyncHandler(updateProfileController));
 authRouter.patch('/password', authenticate, asyncHandler(changePasswordController));
