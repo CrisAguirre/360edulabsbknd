@@ -64,7 +64,7 @@ export const missionM1: SeedMission = {
       order: 1,
       title: 'Sesión 1: ¡Misión microscópica! Acercamiento a la teoría celular',
       instructions:
-        'Visualiza el recurso multimedial y realiza la lectura oficial de la Sesión 1. Revisa la pregunta de indagación: la responderás en la actividad de cierre «Dos ideas que cambian la mirada».',
+        'Explora las sub-actividades de la sesión (1.1 a 1.6): aportes y socialización, aporte conceptual, video documental, lectura adaptada con espacio virtual Vercel, contenidos extras y el reto final evaluativo.',
       required: true,
       completionRule: { type: 'confirm', label: 'He realizado la lectura y visto el video de la Sesión 1' },
       content: {
@@ -145,6 +145,12 @@ export const missionM1: SeedMission = {
             title: 'Contenidos extras de apoyo (Opcionales para el estudiante)',
             description:
               'Contenidos interactivos adicionales que no se encuentran en 1.1, 1.2, 1.3 ni 1.4, disponibles para enriquecer la experiencia científica del estudiante de manera opcional sin bloquear su avance curricular.'
+          },
+          s16: {
+            code: '1.6',
+            title: 'Reto final de evaluación: Teoría celular',
+            description:
+              'Examen evaluativo obligatorio de la Sesión 1 con Cito como tutor y aprobación del 70%.'
           }
         },
         postulates: [
