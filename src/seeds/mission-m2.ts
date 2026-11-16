@@ -68,7 +68,7 @@ export const missionM2: SeedMission = {
       order: 1,
       title: 'Sesión 2: Construyendo el concepto de célula',
       instructions:
-        'Explora las sub-actividades de la sesión (2.1 a 2.6): saberes previos, célula vegetal, célula animal, responde la pregunta de indagación en la plataforma Vercel, visualiza el modelo 360 y video interactivo, y colorea las plantillas Quiver.',
+        'Explora las sub-actividades de la sesión (2.1 a 2.7): saberes previos, célula vegetal, célula animal, modelo 360 y video interactivo, respuesta en la plataforma Vercel, Quiver y análisis comparativo, y el reto evaluativo final.',
       required: true,
       completionRule: {
         type: 'confirm',
@@ -134,22 +134,27 @@ export const missionM2: SeedMission = {
           },
           s24: {
             number: '2.4',
-            title: 'Planteamiento de la pregunta y Espacio Virtual Vercel',
-            question: M2_QUESTION,
-            platform: 'Plataforma Vercel'
-          },
-          s25: {
-            number: '2.5',
             title: 'Presentación del modelo 360 y video interactivo',
             videoUrl: M2_YOUTUBE_URL,
             videoEmbedUrl: M2_YOUTUBE_EMBED_URL,
             model3dDescription: 'Modelo 3D y vista panorámica 360 de la célula animal y vegetal con exploración de organelos.'
+          },
+          s25: {
+            number: '2.5',
+            title: 'Planteamiento de la pregunta y Espacio Virtual Vercel',
+            question: M2_QUESTION,
+            platform: 'Plataforma Vercel'
           },
           s26: {
             number: '2.6',
             title: 'Material impreso Quiver y Análisis Comparativo',
             instructions: M2_QUIVER,
             comparisonTableSummary: '7 estructuras celulares comparadas: Membrana, Núcleo, Citoplasma, Mitocondrias, Vacuolas, Pared celular y Cloroplastos.'
+          },
+          s27: {
+            number: '2.7',
+            title: 'Reto final de evaluación: Células bajo la lupa',
+            description: 'Examen interactivo de 8 preguntas con Cito como tutor y puntaje aprobatorio del 70%.'
           }
         },
         title: 'Animal o vegetal: dos formas de ser célula',
@@ -198,8 +203,8 @@ export const missionM2: SeedMission = {
       order: 2,
       title: 'Video 360 de la célula y sus partes',
       instructions:
-        'Explora la escena 360 y marca tres diferencias entre la célula animal y la vegetal. Completa al menos el 80 % del recorrido.',
-      required: true,
+        'Exploración opcional. Explora la escena 360 y marca tres diferencias entre la célula animal y la vegetal. Completa al menos el 80 % del recorrido.',
+      required: false,
       completionRule: { type: 'video_progress', min: 80 },
       content: {
         durationSeconds: 30,
@@ -374,8 +379,8 @@ export const missionM2: SeedMission = {
       order: 1,
       title: 'Estación Quiver: colorea y observa',
       instructions:
-        'Imprime o descarga las plantillas, colorea la célula animal y la vegetal, escanéalas con Quiver y sube una foto clara en tu evidencia final.',
-      required: true,
+        'Exploración opcional. Imprime o descarga las plantillas oficiales, coloréalas siguiendo el código y escanéalas con la app Quiver en 3D.',
+      required: false,
       completionRule: { type: 'confirm', label: 'Completé mi modelo Quiver' },
       content: {
         title: 'Estación Quiver',
@@ -453,10 +458,10 @@ export const missionM2: SeedMission = {
       phase: 'cierre',
       type: 'evidence',
       order: 1,
-      title: 'Mi mapa de la célula',
+      title: 'Mi mapa de la célula (Bitácora)',
       instructions:
-        'Responde la pregunta de indagación de la Sesión 2 y presenta tu mapa de la célula: foto o enlace del modelo Quiver, cuatro diferencias y reflexión final.',
-      required: true,
+        'Bitácora opcional. Puedes registrar notas complementarias, esquemas adicionales o reflexiones extendidas de la Sesión 2.',
+      required: false,
       completionRule: { type: 'evidence_submitted' },
       content: {
         prompt:
