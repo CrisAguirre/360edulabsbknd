@@ -67,11 +67,11 @@ export const missionM3: SeedMission = {
       order: 1,
       title: 'Sesión 3: Procesos metabólicos de la célula',
       instructions:
-        'Lee el texto oficial de la Sesión 3, explora el funcionamiento de la fábrica celular y revisa el cuadro de estructuras. El cuadro y las preguntas se responden en la actividad de cierre «Mi bitácora de energía».',
+        'Explora las estaciones oficiales de la sesión (3.1 a 3.7): saberes previos, video 360 y analogía de fábrica, preguntas motivadoras, video del metabolismo y lectura Canva, cubo Merge, cuadro de estructuras en Vercel y el reto final evaluativo.',
       required: true,
       completionRule: {
         type: 'confirm',
-        label: 'He leído los contenidos de la Sesión 3 y revisado el cuadro de estructuras'
+        label: 'He recorrido las estaciones de la Sesión 3 y completado el cuadro de estructuras'
       },
       content: {
         sessionNumber: 3,
@@ -89,7 +89,7 @@ export const missionM3: SeedMission = {
           'https://docs.google.com/document/d/1RNF1OnvpUMINXE-p-D-T9ZF2B6ycDj3x/edit?usp=sharing&ouid=107395200434224073532&rtpof=true&sd=true',
         hasCanva: true,
         hasMergeCube: true,
-        hasEvidenceResponse: false,
+        hasEvidenceResponse: true,
         platformResource: 'Plataforma Vercel',
         sourceSession: M3_SESSION,
         sourceSection: 'Descripción de la actividad',
@@ -103,6 +103,57 @@ export const missionM3: SeedMission = {
           M3_TABLE
         ],
         sourceResources: M3_RESOURCES,
+        subactivities: {
+          s31: {
+            code: '3.1',
+            number: '3.1',
+            title: 'Activación de saberes previos y situación cotidiana',
+            description:
+              'Al inicio la docente, activa los saberes previos de los estudiantes mediante una situación cercana a su realidad, promoviendo la reflexión sobre la importancia de los nutrientes, la energía y las transformaciones que ocurren dentro de las células, como punto de partida para comprender el metabolismo celular.'
+          },
+          s32: {
+            code: '3.2',
+            number: '3.2',
+            title: 'Video 360 de una fábrica de producción y analogía celular',
+            description:
+              'Presenta el video 360 de una fábrica de producción, comparando a la célula con una pequeña fábrica que trabaja día y noche. En esta fábrica llegan materiales que son transformados para elaborar productos, se utiliza energía para que las máquinas funcionen y cada trabajador cumple una tarea especial, de manera parecida, las células de nuestro cuerpo reciben nutrientes, los transforman, obtienen energía y producen sustancias necesarias para mantenerse vivas y realizar sus funciones. A todo este conjunto de procesos lo llamamos metabolismo celular.'
+          },
+          s33: {
+            code: '3.3',
+            number: '3.3',
+            title: 'Preguntas motivadoras y respuesta en la plataforma',
+            description:
+              'La docente plantea los siguientes cuestionamientos: ¿Qué creen que sucedería si una fábrica dejara de recibir materiales o energía para funcionar? ¿Pasaría algo parecido en nuestras células si no recibieran los nutrientes que necesitan? Los estudiantes dan respuesta a la pregunta motivadora en la plataforma.'
+          },
+          s34: {
+            code: '3.4',
+            number: '3.4',
+            title: 'Video 360, lectura oficial adaptada e infografía en Canva',
+            description:
+              'La docente presenta el video 360 y solicita a los estudiantes visualizarlo y responder de qué manera las células llevan a cabo sus actividades para conservar la vida y cómo adquieren energía y eliminan desechos, apoyándose en la lectura oficial «El metabolismo celular: ¿Cómo obtienen y utilizan la energía las células?» y plasmándolo en una infografía en Canva.'
+          },
+          s35: {
+            code: '3.5',
+            number: '3.5',
+            title: 'Cubo Merge: estructuras celulares y metabolismo',
+            description:
+              'A partir de la visualización, la docente, presenta y proporciona a los estudiantes un cubo Merge e indica las funcionalidades de la herramienta y propone hacer uso del cubo superponiendo la imagen de la célula vegetal con el propósito de identificar las estructuras celulares para llevar a cabo el metabolismo celular.'
+          },
+          s36: {
+            code: '3.6',
+            number: '3.6',
+            title: 'Cuadro de la estructura celular en la plataforma Vercel',
+            description:
+              'Los estudiantes completan el cuadro de la estructura celular en la plataforma: Membrana celular, Cloroplastos, Mitocondrias, Citoplasma, Vacuola central y Núcleo.'
+          },
+          s37: {
+            code: '3.7',
+            number: '3.7',
+            title: 'Reto final de evaluación: La fábrica de la vida',
+            description:
+              'Examen evaluativo obligatorio de la Sesión 3 con Cito como tutor y aprobación del 70%.'
+          }
+        },
         structuresTable: [
           {
             id: 'membrana',
