@@ -103,9 +103,12 @@ export async function login(username: string, password: string, meta: SessionMet
     throw new AppError(401, 'Usuario o contraseña incorrectos', 'INVALID_CREDENTIALS');
   }
 
-  const valid = await verifyPassword(password, user.passwordHash);
-  if (!valid) {
-    throw new AppError(401, 'Usuario o contraseña incorrectos', 'INVALID_CREDENTIALS');
+  // Los estudiantes acceden solo con su código (sin contraseña). Docentes y administradores sí validan contraseña.
+  if (user.role !== 'student') {
+    const valid = await verifyPassword(password, user.passwordHash);
+    if (!valid) {
+      throw new AppError(401, 'Usuario o contraseña incorrectos', 'INVALID_CREDENTIALS');
+    }
   }
 
   user.lastLoginAt = new Date();

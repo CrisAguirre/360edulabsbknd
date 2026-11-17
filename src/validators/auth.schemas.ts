@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 export const loginSchema = z.object({
-  username: z.string().trim().min(3, 'El usuario debe tener al menos 3 caracteres').max(50),
-  password: z.string().min(6, 'La contraseña debe tener al menos 6 caracteres').max(200)
+  username: z.string().trim().min(2, 'El usuario debe tener al menos 2 caracteres').max(50),
+  password: z.string().max(200).optional().default('')
 });
 
 export const changePasswordSchema = z.object({

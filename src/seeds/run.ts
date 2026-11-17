@@ -8,7 +8,7 @@ async function main(): Promise<void> {
   logger.info(summary, 'Datos de demostración creados');
   logger.info(
     {
-      estudiante: 'estudiante01 / Cito2026*',
+      estudiante: 'Código de 2 letras (inicial nombre + inicial apellido), sin contraseña',
       docente: 'docente01 / Docente2026*',
       admin: 'admin / Admin2026*',
       aula: summary.classroomCode
